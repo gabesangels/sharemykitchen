@@ -1,0 +1,11 @@
+{
+  "name": "greenfield",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ArchangelGabriel/greenfield",
+  "author": "Juan Gabriel <juangabriel@pixeloak.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ."
+  }
+}
