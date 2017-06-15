@@ -1,5 +1,6 @@
 {
   "env": {
+    "browser": true,
     "jest": true
   },
   "extends": "airbnb",
@@ -8,6 +9,7 @@
   ],
   "rules": {
     "semi": [2, "never"],
-    "no-unexpected-multiline": 2
+    "no-unexpected-multiline": 2,
+    "arrow-body-style": ["error", "always"]
   }
 }
