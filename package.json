@@ -4,8 +4,27 @@
   "main": "index.js",
   "repository": "https://github.com/ArchangelGabriel/greenfield",
   "author": "Juan Gabriel <juangabriel@pixeloak.com>",
+  "browserslist": [
+    "> 1%"
+  ],
   "license": "MIT",
   "scripts": {
-    "start": "node ."
+    "start": "babel-node src",
+    "test": "eslint src && jest",
+    "precommit": "yarn test",
+    "prepush": "yarn test"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-jest": "^20.0.3",
+    "babel-preset-env": "^1.5.2",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "latest",
+    "eslint-plugin-compat": "^1.0.3",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^5.0.1",
+    "eslint-plugin-react": "^7.0.1",
+    "husky": "^0.13.4",
+    "jest": "^20.0.4"
   }
 }

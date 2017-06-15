@@ -1,0 +1,13 @@
+{
+  "env": {
+    "jest": true
+  },
+  "extends": "airbnb",
+  "plugins": [
+    "compat"
+  ],
+  "rules": {
+    "semi": [2, "never"],
+    "no-unexpected-multiline": 2
+  }
+}
