@@ -9,15 +9,20 @@
   ],
   "license": "MIT",
   "scripts": {
-    "start": "babel-node src",
+    "start": "yarn dev:start",
+    "dev:start": "nodemon --ignore lib --exec babel-node src/server",
+    "prod:build": "rimraf lib && babel src -d lib --ignore .test.js",
+    "prod:start": "export NODE_ENV=production && pm2 start lib/server && pm2 logs",
+    "prod:stop": "pm2 delete server",
     "test": "eslint src && jest",
     "precommit": "yarn test",
-    "prepush": "yarn test"
+    "prepush": "yarn test && yarn prod:build"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-jest": "^20.0.3",
     "babel-preset-env": "^1.5.2",
+    "cross-env": "^5.0.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "latest",
     "eslint-plugin-compat": "^1.0.3",
@@ -25,6 +30,13 @@
     "eslint-plugin-jsx-a11y": "^5.0.1",
     "eslint-plugin-react": "^7.0.1",
     "husky": "^0.13.4",
-    "jest": "^20.0.4"
+    "jest": "^20.0.4",
+    "nodemon": "^1.11.0",
+    "pm2": "^2.5.0",
+    "rimraf": "^2.6.1"
+  },
+  "dependencies": {
+    "compression": "^1.6.2",
+    "express": "^4.15.3"
   }
 }
