@@ -10,7 +10,7 @@ export const helloPage = () => {
 
 export const helloAsyncPage = () => {
   return {
-    hello: { message: 'Server side pre loaded message for async page' },
+    hello: { messageAsync: 'Server side pre loaded message for async page' },
   }
 }
 

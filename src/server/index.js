@@ -2,7 +2,7 @@ import compression from 'compression'
 import express from 'express'
 
 import routing from './routing'
-import { WEB_PORT, STATIC_PATH, APP_NAME } from '../shared/config'
+import { WEB_PORT, STATIC_PATH } from '../shared/config'
 import { isProd } from '../shared/util'
 
 const app = express()

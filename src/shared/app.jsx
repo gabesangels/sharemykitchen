@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
+import Helmet from 'react-helmet'
 
 import { APP_NAME } from './config'
 import {
@@ -18,6 +19,7 @@ import NotFoundPage from './component/page/not-found'
 const App = () => {
   return (
     <div>
+      <Helmet titleTemplate={`%s | ${APP_NAME}`} defaultTitle={APP_NAME} />
       <h1>{APP_NAME}</h1>
       <Nav />
       <Switch>
