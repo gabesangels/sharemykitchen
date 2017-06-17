@@ -3,12 +3,12 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import { APP_NAME } from '../shared/config'
+import { APP_NAME } from './config'
 import {
   HOME_PAGE_ROUTE,
   HELLO_PAGE_ROUTE,
   HELLO_ASYNC_PAGE_ROUTE,
-} from '../shared/routes'
+} from './routes'
 import Nav from './component/nav'
 import HomePage from './component/page/home'
 import HelloPage from './component/page/hello'
