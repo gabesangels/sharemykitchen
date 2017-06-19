@@ -50,6 +50,7 @@
     "compression": "^1.6.2",
     "express": "^4.15.3",
     "isomorphic-fetch": "^2.2.1",
+    "mongoose": "^4.10.7",
     "prop-types": "^15.5.10",
     "raven": "^2.0.2",
     "raven-for-redux": "^1.0.0",
