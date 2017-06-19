@@ -1,5 +1,6 @@
 import compression from 'compression'
 import express from 'express'
+import bodyParser from 'body-parser'
 import './db/db'
 
 import usersRoute from './routes/users'
@@ -14,6 +15,7 @@ if (RAVEN_PATH_SERVER) {
 
 const app = express()
 
+app.use(bodyParser.json())
 app.use(compression())
 app.use(STATIC_PATH, express.static('dist'))
 app.use(STATIC_PATH, express.static('public'))
