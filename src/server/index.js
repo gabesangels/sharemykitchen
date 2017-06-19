@@ -1,6 +1,7 @@
 import compression from 'compression'
 import express from 'express'
 
+import usersRoute from './routes/users'
 import routing from './routing'
 import { WEB_PORT, STATIC_PATH, RAVEN_PATH_SERVER } from '../shared/config'
 import { isProd } from '../shared/util'
@@ -16,6 +17,7 @@ app.use(compression())
 app.use(STATIC_PATH, express.static('dist'))
 app.use(STATIC_PATH, express.static('public'))
 
+app.use('/api', usersRoute)
 routing(app)
 
 app.listen(WEB_PORT, () => {
