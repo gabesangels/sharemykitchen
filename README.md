@@ -33,3 +33,15 @@ git pull upstream endpoint/tests/1 --rebase
 git stash pop
 git add .
 git commit
+
+
+//to fix a merge conflict:
+-pull&rebase changes: git pull upstream [branch name] --rebase
+-fix changes and delete HEAD and TAIL comments
+-stage and commit changes
+-continue the rebase with git rebase --continue
+-repeat as necessary. Sometime git rebase --skip is required?
+-commit and push changes back up to your branch
+-attempt the merge again 
+
+
