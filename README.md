@@ -2,3 +2,34 @@
 
 # sharemykitchen
 A place for hosts to post a profile and connect with guests that want to rent a kitchen for one night
+
+GIT workflow
+
+Git rebase
+Git commit
+Git push set upstream origin stu2
+
+Pull request
+Refresh
+Check out tests
+Merge and squash
+
+//Go to the master version
+Git checkout master
+//Get the most current version
+Git pull upstream master
+//Make a new branch
+Git checkout -b stu3
+
+When trying to bring in another team members work, when it hasn't been merged with
+git fetch endpoint/tests/1
+git checkout endpoint/tests/1
+
+git checkout -b stutest
+
+When trying to bring in others work while already on their branch
+git stash
+git pull upstream endpoint/tests/1 --rebase
+git stash pop
+git add .
+git commit

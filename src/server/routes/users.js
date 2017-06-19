@@ -1,5 +1,5 @@
 import express from 'express'
-import { 
+import {
   USERS_INDEX,
   USERS_SHOW,
   USERS_CREATE,
@@ -9,10 +9,10 @@ import {
 
 const router = express.Router()
 
-router.route(USERS_INDEX, (req, res) => {})
-router.route(USERS_SHOW, (req, res) => {})
-router.route(USERS_CREATE, (req, res) => {})
-router.route(USERS_UPDATE, (req, res) => {})
-router.route(USERS_DELETE, (req, res) => {})
+router.route(USERS_INDEX).get((req, res) => {})
+router.route(USERS_SHOW).get((req, res) => {})
+router.route(USERS_CREATE).post((req, res) => {})
+router.route(USERS_UPDATE).put((req, res) => {})
+router.route(USERS_DELETE).delete((req, res) => {})
 
-export default router;
+export default router
