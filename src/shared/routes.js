@@ -16,6 +16,12 @@ export const REVIEWS_CREATE = '/reviews'
 export const REVIEWS_UPDATE = '/reviews/:id'
 export const REVIEWS_DELETE = '/reviews/:id'
 
+export const LISTINGS_INDEX = '/listings'
+export const LISTINGS_SHOW = '/listings/:id'
+export const LISTINGS_CREATE = '/listings'
+export const LISTINGS_UPDATE = '/listings/:id'
+export const LISTINGS_DELETE = '/listings/:id'
+
 export const HOME_PAGE_ROUTE = '/'
 export const HELLO_PAGE_ROUTE = '/hello'
 export const HELLO_ASYNC_PAGE_ROUTE = '/hello-async'
