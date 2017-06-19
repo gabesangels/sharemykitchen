@@ -10,8 +10,19 @@ import { BrowserRouter } from 'react-router-dom'
 
 import App from '../shared/app'
 import helloReducer from '../shared/reducer/hello'
-import { APP_CONTAINER_SELECTOR } from '../shared/config'
+import { APP_CONTAINER_SELECTOR, RAVEN_PATH_CLIENT } from '../shared/config'
 import { isProd } from '../shared/util'
+
+// eslint-disable-next-line prefer-const
+let middlewares = [thunkMiddleware]
+if (RAVEN_PATH_CLIENT) {
+  /* eslint-disable global-require */
+  const Raven = require('raven-js')
+  const createRavenMiddleware = require('raven-for-redux')
+  Raven.config(RAVEN_PATH_CLIENT, { environment: isProd ? 'production' : 'development' }).install()
+  middlewares.unshift(createRavenMiddleware(Raven))
+  /* eslint-disable global-require */
+}
 
 /* eslint-disable no-underscore-dangle */
 const composeEnhancers = (isProd ? null : window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose
@@ -21,7 +32,7 @@ const preloadedState = window.__PRELOADED_STATE__
 const store = createStore(
   combineReducers({ hello: helloReducer }),
   { hello: preloadedState.hello },
-  composeEnhancers(applyMiddleware(thunkMiddleware)),
+  composeEnhancers(applyMiddleware(...middlewares)),
 )
 
 const rootEl = document.querySelector(APP_CONTAINER_SELECTOR)
