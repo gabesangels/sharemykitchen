@@ -1,5 +1,6 @@
 import compression from 'compression'
 import express from 'express'
+import './db/db'
 
 import usersRoute from './routes/users'
 import routing from './routing'
