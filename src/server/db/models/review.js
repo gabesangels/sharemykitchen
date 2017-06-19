@@ -12,7 +12,6 @@ const ReviewSchema = new Schema({
   booking_id: Number,
 })
 
-
 const ReviewModel = mongoose.model('Review', ReviewSchema)
 
-exports.ReviewModel = ReviewModel
+export default ReviewModel

@@ -13,7 +13,6 @@ const ListingSchema = new Schema({
   area: String,
 })
 
-
 const ListingModel = mongoose.model('Listing', ListingSchema)
 
-exports.ListingModel = ListingModel
+export default ListingModel

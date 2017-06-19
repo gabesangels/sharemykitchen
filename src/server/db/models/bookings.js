@@ -11,7 +11,6 @@ const BookingSchema = new Schema({
   paid: Boolean,
 })
 
-
 const BookingModel = mongoose.model('Booking', BookingSchema)
 
-exports.BookingModel = BookingModel
+export default BookingModel
