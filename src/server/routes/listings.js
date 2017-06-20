@@ -85,9 +85,6 @@ router.route(LISTINGS_UPDATE).put((req, res) => {
 
 router.route(LISTINGS_DELETE).delete((req, res) => {
 
-<<<<<<< HEAD
-export default router
-=======
   //grab the listing id from the req.params
   var id = req.params.id
   //use findByIdAndRemove
@@ -109,4 +106,3 @@ export default router
 })
 
 export default router;
->>>>>>> Wrote LISTINGS_DELETE route in server/routes/listings.js
