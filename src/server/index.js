@@ -1,7 +1,7 @@
 import compression from 'compression'
 import express from 'express'
 import bodyParser from 'body-parser'
-import './db/db'
+import './db/'
 
 import usersRoute from './routes/users'
 import routing from './routing'
