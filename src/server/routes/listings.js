@@ -1,5 +1,7 @@
 import express from 'express'
+
 import {
+
   LISTINGS_INDEX,
   LISTINGS_SHOW,
   LISTINGS_CREATE,
@@ -15,4 +17,6 @@ router.route(LISTINGS_CREATE).post((req, res) => {})
 router.route(LISTINGS_UPDATE).put((req, res) => {})
 router.route(LISTINGS_DELETE).delete((req, res) => {})
 
+
 export default router
+
