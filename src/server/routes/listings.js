@@ -15,4 +15,4 @@ router.route(LISTINGS_CREATE).post((req, res) => {})
 router.route(LISTINGS_UPDATE).put((req, res) => {})
 router.route(LISTINGS_DELETE).delete((req, res) => {})
 
-export default router;
+export default router
