@@ -1,7 +1,6 @@
 import express from 'express'
 
 import {
-
   LISTINGS_INDEX,
   LISTINGS_SHOW,
   LISTINGS_CREATE,
@@ -23,7 +22,6 @@ router.route(LISTINGS_INDEX).get((req, res) => {
 })
 
 router.route(LISTINGS_SHOW).get((req, res) => {
-
   //parse the req url to get the listing id
   var id = req.params.id
   //query the database for the listing whose id matches the req id
@@ -37,7 +35,6 @@ router.route(LISTINGS_SHOW).get((req, res) => {
 })
 
 router.route(LISTINGS_CREATE).post((req, res) => {
-
   //grab the listings object from res.body
   var listing = req.body
   //user model.create to add it to the database
