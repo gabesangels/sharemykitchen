@@ -83,6 +83,30 @@ router.route(LISTINGS_UPDATE).put((req, res) => {
   })
 })
 
-router.route(LISTINGS_DELETE).delete((req, res) => {})
+router.route(LISTINGS_DELETE).delete((req, res) => {
 
+<<<<<<< HEAD
 export default router
+=======
+  //grab the listing id from the req.params
+  var id = req.params.id
+  //use findByIdAndRemove
+  ListingsModel.findByIdAndRemove(id, function(err, listing) {
+    //error handle
+    if (err) {
+      res.status(500).send(err)
+    }
+    //otherwise, send a confirmation back with a refernece 
+    var response = {
+      message: "Listing deleted",
+      id: id
+    }
+
+    res.send(response)
+    
+  })
+
+})
+
+export default router;
+>>>>>>> Wrote LISTINGS_DELETE route in server/routes/listings.js
