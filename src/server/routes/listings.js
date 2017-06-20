@@ -1,5 +1,5 @@
 import express from 'express'
-import { 
+import {
   LISTINGS_INDEX,
   LISTINGS_SHOW,
   LISTINGS_CREATE,

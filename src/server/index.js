@@ -6,7 +6,7 @@ import './db/'
 import usersRoute from './routes/users'
 import routing from './routing'
 import { WEB_PORT, STATIC_PATH, RAVEN_PATH_SERVER } from '../shared/config'
-import { isProd, currEnv } from '../shared/util'
+import { currEnv } from '../shared/util'
 
 if (RAVEN_PATH_SERVER) {
   // eslint-disable-next-line global-require
@@ -23,11 +23,11 @@ app.use(STATIC_PATH, express.static('public'))
 app.use('/api', usersRoute)
 routing(app)
 
-app.listen(WEB_PORT, () => {
-  /* eslint-disable-next-line no-console */
+/* eslint-disable no-console,no-unused-expressions */
+currEnv !== 'testing' && app.listen(WEB_PORT, () => {
   console.log(`Server is running on port ${WEB_PORT} (${currEnv}).`)
   currEnv === 'development' && console.log('Keep "yarn dev:wds" running on a separate terminal')
-  /* eslint-disable-next-line no-console */
 })
+/* eslint-disable no-console,no-unused-expressions */
 
 export default app

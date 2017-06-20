@@ -10,6 +10,7 @@ const env = {
 }
 
 mongoose.connect(env[currEnv])
+mongoose.Promise = global.Promise
 
 const db = mongoose.connection
 
