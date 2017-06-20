@@ -31,3 +31,15 @@ export const NOT_FOUND_DEMO_PAGE_ROUTE = '/404'
 export const helloEndpointRoute = (num) => {
   return `/ajax/hello/${num || ':num'}`
 }
+
+export const usersShowRoute = (id) => {
+  return `/users/${id || ':id'}`
+}
+
+export const usersUpdateRoute = (id) => {
+  return `/users/${id || ':id'}`
+}
+
+export const usersDeleteRoute = (id) => {
+  return `/users/${id || ':id'}`
+}
