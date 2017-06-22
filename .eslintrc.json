@@ -10,7 +10,10 @@
   "rules": {
     "semi": [2, "never"],
     "no-unexpected-multiline": 2,
-    "arrow-body-style": ["error", "always"]
+    "arrow-body-style": ["error", "always"],
+    "no-underscore-dangle": ["error", { "allow": ["_id"] }],
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+    "camelcase": 0
   },
   "settings": {
     "polyfills": ["fetch"]

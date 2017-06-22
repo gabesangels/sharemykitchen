@@ -17,6 +17,7 @@
     "prod:stop": "pm2 delete server",
     "lint": "eslint src webpack.config.babel.js --ext .js,.jsx",
     "test": "yarn lint && jest",
+    "test:local": "export NODE_ENV=testing && jest --verbose",
     "precommit": "yarn test",
     "prepush": "yarn test && yarn prod:build"
   },
@@ -35,6 +36,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^5.0.1",
     "eslint-plugin-react": "^7.0.1",
+    "faker": "^4.1.0",
     "fetch-mock": "^5.11.0",
     "husky": "^0.13.4",
     "jest": "^20.0.4",
@@ -42,12 +44,15 @@
     "pm2": "^2.5.0",
     "redux-mock-store": "^1.2.3",
     "rimraf": "^2.6.1",
+    "supertest": "^3.0.0",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
+    "body-parser": "^1.17.2",
     "compression": "^1.6.2",
+    "dotenv": "^4.0.0",
     "express": "^4.15.3",
     "isomorphic-fetch": "^2.2.1",
     "mongoose": "^4.10.7",
