@@ -3,6 +3,7 @@ import passport from 'passport'
 import passportFacebook from 'passport-facebook'
 
 import User from '../db/models/user'
+import authRequired from '../middlewares/authRequired'
 
 import {
   FACEBOOK_CLIENT_ID,
@@ -13,6 +14,9 @@ import {
 import {
   AUTH_FACEBOOK,
   AUTH_FACEBOOK_CALLBACK,
+  AUTH_ME,
+  AUTH_LOGOUT,
+  HOME_PAGE_ROUTE,
   HELLO_ASYNC_PAGE_ROUTE,
 } from '../../shared/routes'
 
@@ -46,7 +50,11 @@ passport.deserializeUser((id, done) => {
   User
     .findById(id)
     .then((user) => {
-      done(null, user)
+      done(null, {
+        name: user.name,
+        email: user.email,
+        picture: `//graph.facebook.com/${user.facebook_uid}/picture?width=150&height=150`,
+      })
     })
 })
 
@@ -55,5 +63,19 @@ const router = express.Router()
 router.get(AUTH_FACEBOOK, passport.authenticate('facebook', { authType: 'rerequest', scope: ['email', 'public_profile'] }))
 
 router.get(AUTH_FACEBOOK_CALLBACK, passport.authenticate('facebook', { successRedirect: HELLO_ASYNC_PAGE_ROUTE }))
+
+router.get(AUTH_ME, authRequired, (req, res) => {
+  res.send(req.user)
+})
+
+router.get(AUTH_LOGOUT, (req, res) => {
+  const from = req.query.from
+  req.logout()
+  if (from) {
+    res.redirect(from)
+    return
+  }
+  res.redirect(HOME_PAGE_ROUTE)
+})
 
 export default router
