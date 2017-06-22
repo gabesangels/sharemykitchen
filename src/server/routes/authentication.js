@@ -65,7 +65,7 @@ router.get(AUTH_FACEBOOK, passport.authenticate('facebook', { authType: 'rereque
 router.get(AUTH_FACEBOOK_CALLBACK, passport.authenticate('facebook', { successRedirect: HELLO_ASYNC_PAGE_ROUTE }))
 
 router.get(AUTH_ME, authRequired, (req, res) => {
-  res.send(req.user)
+  res.json(req.user)
 })
 
 router.get(AUTH_LOGOUT, (req, res) => {
