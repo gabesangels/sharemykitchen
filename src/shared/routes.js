@@ -1,5 +1,7 @@
 export const AUTH_FACEBOOK = '/facebook'
 export const AUTH_FACEBOOK_CALLBACK = '/facebook/callback'
+export const AUTH_ME = '/me'
+export const AUTH_LOGOUT = '/logout'
 
 export const USERS_INDEX = '/users'
 export const USERS_SHOW = '/users/:id'
