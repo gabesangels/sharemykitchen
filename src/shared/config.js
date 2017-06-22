@@ -8,6 +8,12 @@ export const MONGO_DEV_URI = process.env.MONGO_DEV_URI || 'mongodb://127.0.0.1/s
 export const MONGO_TEST_URI = process.env.MONGO_TEST_URI || 'mongodb://127.0.0.1/sharemykitchen_test'
 export const MONGO_PROD_URI = process.env.MONGO_PROD_URI || 'mongodb://127.0.0.1/sharemykitchen'
 
+export const FACEBOOK_CLIENT_ID = process.env.FACEBOOK_CLIENT_ID
+export const FACEBOOK_CLIENT_SECRET = process.env.FACEBOOK_CLIENT_SECRET
+export const FACEBOOK_CALLBACK_URL = process.env.FACEBOOK_CALLBACK_URL
+
+export const COOKIE_SECRET = process.env.COOKIE_SECRET
+
 export const APP_NAME = 'Greenfield Project'
 
 export const APP_CONTAINER_CLASS = 'js-app'

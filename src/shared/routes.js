@@ -1,3 +1,6 @@
+export const AUTH_FACEBOOK = '/facebook'
+export const AUTH_FACEBOOK_CALLBACK = '/facebook/callback'
+
 export const USERS_INDEX = '/users'
 export const USERS_SHOW = '/users/:id'
 export const USERS_CREATE = '/users'
