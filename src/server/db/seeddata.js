@@ -168,7 +168,7 @@ export const seedListings = [
   {
     'name': 'gravida non, sollicitudin a, malesuada id,',
     'host_id': mongoose.Types.ObjectId(),
-    'pictures': '[]',
+    'pictures': [],
     'features': {
         'refrigerator': 'black',
         'stove': 'electric',
@@ -186,7 +186,7 @@ export const seedListings = [
   {
     'name': 'velit eu sem. Pellentesque ut ipsum',
     'host_id': mongoose.Types.ObjectId(),
-    'pictures': '[]',
+    'pictures': [],
     'features': {
         'refrigerator': 'black',
         'stove': 'electric',
@@ -204,7 +204,7 @@ export const seedListings = [
   {
     'name': 'rutrum magna. Cras convallis convallis dolor.',
     'host_id': mongoose.Types.ObjectId(),
-    'pictures': '[]',
+    'pictures': [],
     'features': {
         'refrigerator': 'black',
         'stove': 'gas',
@@ -222,7 +222,7 @@ export const seedListings = [
   {
     'name': 'lobortis, nisi nibh lacinia orci, consectetuer',
     'host_id': mongoose.Types.ObjectId(),
-    'pictures': '[]',
+    'pictures': [],
     'features': {
         'refrigerator': 'stainless',
         'stove': 'gas',
@@ -240,7 +240,7 @@ export const seedListings = [
   {
     'name': 'ut cursus luctus, ipsum leo elementum',
     'host_id': mongoose.Types.ObjectId(),
-    'pictures': '[]',
+    'pictures': [],
     'features': {
         'refrigerator': 'stainless',
         'stove': 'gas',
@@ -258,7 +258,7 @@ export const seedListings = [
   {
     'name': 'metus sit amet ante. Vivamus non',
     'host_id': mongoose.Types.ObjectId(),
-    'pictures': '[]',
+    'pictures': [],
     'features': {
         'refrigerator': 'stainless',
         'stove': 'electric',
@@ -276,7 +276,7 @@ export const seedListings = [
   {
     'name': 'molestie arcu. Sed eu nibh vulputate',
     'host_id': mongoose.Types.ObjectId(),
-    'pictures': '[]',
+    'pictures': [],
     'features': {
         'refrigerator': 'stainless',
         'stove': 'gas',
@@ -294,7 +294,7 @@ export const seedListings = [
   {
     'name': 'Vestibulum accumsan neque et nunc. Quisque',
     'host_id': mongoose.Types.ObjectId(),
-    'pictures': '[]',
+    'pictures': [],
     'features': {
         'refrigerator': 'stainless',
         'stove': 'gas',
@@ -330,7 +330,7 @@ export const seedListings = [
   {
     'name': 'luctus vulputate, nisi sem semper erat,',
     'host_id': mongoose.Types.ObjectId(),
-    'pictures': '[]',
+    'pictures': [],
     'features': {
         'refrigerator': 'black',
         'stove': 'electric',

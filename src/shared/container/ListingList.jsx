@@ -33,8 +33,13 @@ class ListingList extends React.Component {
   render() {
     return (
       <div className="listing-list">
-        {this.state.listings.map((kitchen, i) => {
-          return <Listing kitchen={kitchen} key={i} />
+        {this.state.listings.map((kitchen) => {
+          return (
+            <Listing
+              key={kitchen._id}
+              kitchen={kitchen}
+            />
+          )
         })}
       </div>
     )

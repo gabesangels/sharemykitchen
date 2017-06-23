@@ -1,11 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
+
+import { listingsShowRoute } from '../routes'
 
 const Listing = (props) => {
   return (
-    <div className="one-listing">
-      <h2>{props.kitchen.name}</h2>
-      <img className="listing-pic" src={props.kitchen.pictures[0]} alt="kitchen" />
+    <Link
+      className="one-listing"
+      to={`${listingsShowRoute(props.kitchen._id)}`}
+    >
+      <h2>
+        {props.kitchen.name}
+      </h2>
+      <img
+        className="listing-pic"
+        src={props.kitchen.pictures[0]}
+        alt="kitchen"
+      />
       <div className="listing-details">
         Area: {props.kitchen.area} <br />
         Rating: {props.kitchen.rating} <br />
@@ -16,7 +28,7 @@ const Listing = (props) => {
             })}
           </ul>
       </div>
-    </div>
+    </Link>
   )
 }
 
