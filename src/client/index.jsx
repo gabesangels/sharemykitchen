@@ -11,8 +11,10 @@ import { BrowserRouter } from 'react-router-dom'
 import App from '../shared/app'
 import helloReducer from '../shared/reducer/hello'
 import authenticationReducer from '../shared/reducer/authentication'
+import listingsReducer from '../shared/reducer/listings'
 import { APP_CONTAINER_SELECTOR, RAVEN_PATH_CLIENT } from '../shared/config'
 import { isProd, currEnv } from '../shared/util'
+import '../shared/action/listings'
 
 // eslint-disable-next-line prefer-const
 let middlewares = [thunkMiddleware]
@@ -31,10 +33,14 @@ const preloadedState = window.__PRELOADED_STATE__
 /* eslint-disable no-underscore-dangle */
 
 const store = createStore(
-  combineReducers({ hello: helloReducer, authentication: authenticationReducer }),
+  combineReducers({
+    hello: helloReducer,
+    authentication: authenticationReducer,
+    listings: listingsReducer }),
   {
     hello: preloadedState.hello,
     authentication: preloadedState.authentication,
+    listings: preloadedState.listingsReducer,
   },
   composeEnhancers(applyMiddleware(...middlewares)),
 )
@@ -62,3 +68,5 @@ if (module.hot) {
     ReactDOM.render(wrapApp(NextApp, store), rootEl)
   })
 }
+
+window.store = store
