@@ -17,6 +17,7 @@ import {
 const router = express.Router()
 
 router.route(LISTINGS_INDEX).get((req, res, next) => {
+
   const qs = req.query
   const features = Object.assign(
       {},
@@ -26,7 +27,7 @@ router.route(LISTINGS_INDEX).get((req, res, next) => {
       qs.blender && qs.blender.length && { 'features.blender': qs.blender },
       qs.refrigerator && qs.refrigerator.length && { 'features.refrigerator': qs.refrigerator },
     )
-
+  
   Listing
     .find(features)
     .then((listings) => {
