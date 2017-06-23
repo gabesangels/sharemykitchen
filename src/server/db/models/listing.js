@@ -8,7 +8,7 @@ const ListingSchema = new Schema({
   address: String,
   rating: Number,
   pictures: Array,
-  features: Array,
+  features: Object,
   rate: Number,
   area: String,
 })

@@ -11,8 +11,8 @@ import bookingsRoute from './routes/bookings'
 import listingsRoute from './routes/listings'
 import reviewsRoute from './routes/reviews'
 import usersRoute from './routes/users'
-
 import routing from './routing'
+
 import { WEB_PORT, STATIC_PATH, RAVEN_PATH_SERVER, COOKIE_SECRET } from '../shared/config'
 import { currEnv } from '../shared/util'
 
@@ -23,6 +23,7 @@ if (RAVEN_PATH_SERVER) {
 
 const app = express()
 
+app.use(bodyParser.json())
 app.use(compression())
 app.use(bodyParser.json())
 app.use(session({

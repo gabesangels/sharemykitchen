@@ -7,3 +7,24 @@ body {
 h1 {
   color: limegreen;
 }
+
+.listing-list {
+
+}
+
+.one-listing {
+  border: solid;
+  margin: 10px;
+  padding: 5px;
+}
+
+.listing-details {
+  float: right;
+  margin-right: 15px;
+}
+
+.listing-pic {
+  height: 200px;
+  width: 200px;
+  margin-left: 15px;
+}

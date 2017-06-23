@@ -1,6 +1,7 @@
 /* eslint-disable */
+import mongoose from 'mongoose'
 
-const seedUsers = [
+export const seedUsers = [
   {
     username: 'mrandolph',
     guest: false,
@@ -163,11 +164,11 @@ const seedUsers = [
   },
 ]
 
-const seedListings = [
+export const seedListings = [
   {
     'name': 'gravida non, sollicitudin a, malesuada id,',
-    'host_id': 72,
-    'pictures': '{}',
+    'host_id': mongoose.Types.ObjectId(),
+    'pictures': '[]',
     'features': {
         'refrigerator': 'black',
         'stove': 'electric',
@@ -184,8 +185,8 @@ const seedListings = [
   },
   {
     'name': 'velit eu sem. Pellentesque ut ipsum',
-    'host_id': 73,
-    'pictures': '{}',
+    'host_id': mongoose.Types.ObjectId(),
+    'pictures': '[]',
     'features': {
         'refrigerator': 'black',
         'stove': 'electric',
@@ -202,8 +203,8 @@ const seedListings = [
   },
   {
     'name': 'rutrum magna. Cras convallis convallis dolor.',
-    'host_id': 89,
-    'pictures': '{}',
+    'host_id': mongoose.Types.ObjectId(),
+    'pictures': '[]',
     'features': {
         'refrigerator': 'black',
         'stove': 'gas',
@@ -220,8 +221,8 @@ const seedListings = [
   },
   {
     'name': 'lobortis, nisi nibh lacinia orci, consectetuer',
-    'host_id': 82,
-    'pictures': '{}',
+    'host_id': mongoose.Types.ObjectId(),
+    'pictures': '[]',
     'features': {
         'refrigerator': 'stainless',
         'stove': 'gas',
@@ -238,8 +239,8 @@ const seedListings = [
   },
   {
     'name': 'ut cursus luctus, ipsum leo elementum',
-    'host_id': 77,
-    'pictures': '{}',
+    'host_id': mongoose.Types.ObjectId(),
+    'pictures': '[]',
     'features': {
         'refrigerator': 'stainless',
         'stove': 'gas',
@@ -256,8 +257,8 @@ const seedListings = [
   },
   {
     'name': 'metus sit amet ante. Vivamus non',
-    'host_id': 96,
-    'pictures': '{}',
+    'host_id': mongoose.Types.ObjectId(),
+    'pictures': '[]',
     'features': {
         'refrigerator': 'stainless',
         'stove': 'electric',
@@ -274,8 +275,8 @@ const seedListings = [
   },
   {
     'name': 'molestie arcu. Sed eu nibh vulputate',
-    'host_id': 42,
-    'pictures': '{}',
+    'host_id': mongoose.Types.ObjectId(),
+    'pictures': '[]',
     'features': {
         'refrigerator': 'stainless',
         'stove': 'gas',
@@ -292,8 +293,8 @@ const seedListings = [
   },
   {
     'name': 'Vestibulum accumsan neque et nunc. Quisque',
-    'host_id': 80,
-    'pictures': '{}',
+    'host_id': mongoose.Types.ObjectId(),
+    'pictures': '[]',
     'features': {
         'refrigerator': 'stainless',
         'stove': 'gas',
@@ -310,8 +311,8 @@ const seedListings = [
   },
   {
     'name': 'odio. Nam interdum enim non nisi.',
-    'host_id': 39,
-    'pictures': '{}',
+    'host_id': mongoose.Types.ObjectId(),
+    'pictures': '[]',
     'features': {
         'refrigerator': 'black',
         'stove': 'gas',
@@ -328,8 +329,8 @@ const seedListings = [
   },
   {
     'name': 'luctus vulputate, nisi sem semper erat,',
-    'host_id': 22,
-    'pictures': '{}',
+    'host_id': mongoose.Types.ObjectId(),
+    'pictures': '[]',
     'features': {
         'refrigerator': 'black',
         'stove': 'electric',
@@ -346,118 +347,112 @@ const seedListings = [
   },
 ]
 
-const seedBookings = [
+export const seedBookings = [
   {
-    'listing_id': 50,
-    'host_id': 75,
-    'guest_id': 51,
+    'listing_id': mongoose.Types.ObjectId(),
+    'host_id': mongoose.Types.ObjectId(),
+    'guest_id': mongoose.Types.ObjectId(),
     'date': '1490970056',
     'rate': 58,
     'paid': 'true'
   },
   {
-    'listing_id': 12,
-    'host_id': 62,
-    'guest_id': 70,
+    'listing_id': mongoose.Types.ObjectId(),
+    'host_id': mongoose.Types.ObjectId(),
+    'guest_id': mongoose.Types.ObjectId(),
     'date': '1516984678',
     'rate': 39,
     'paid': 'false'
   },
   {
-    'listing_id': 44,
-    'host_id': 55,
-    'guest_id': 93,
+    'listing_id': mongoose.Types.ObjectId(),
+    'host_id': mongoose.Types.ObjectId(),
+    'guest_id': mongoose.Types.ObjectId(),
     'date': '1521034619',
     'rate': 51,
     'paid': 'true'
   },
   {
-    'listing_id': 75,
-    'host_id': 22,
-    'guest_id': 29,
+    'listing_id': mongoose.Types.ObjectId(),
+    'host_id': mongoose.Types.ObjectId(),
+    'guest_id': mongoose.Types.ObjectId(),
     'date': '1511887364',
     'rate': 53,
     'paid': 'false'
   },
   {
-    'listing_id': 54,
-    'host_id': 91,
-    'guest_id': 21,
+    'listing_id': mongoose.Types.ObjectId(),
+    'host_id': mongoose.Types.ObjectId(),
+    'guest_id': mongoose.Types.ObjectId(),
     'date': '1469385001',
     'rate': 38,
     'paid': 'true'
   },
   {
-    'listing_id': 20,
-    'host_id': 98,
-    'guest_id': 24,
+    'listing_id': mongoose.Types.ObjectId(),
+    'host_id': mongoose.Types.ObjectId(),
+    'guest_id': mongoose.Types.ObjectId(),
     'date': '1527650929',
     'rate': 63,
     'paid': 'false'
   },
   {
-    'listing_id': 13,
-    'host_id': 57,
-    'guest_id': 80,
+    'listing_id': mongoose.Types.ObjectId(),
+    'host_id': mongoose.Types.ObjectId(),
+    'guest_id': mongoose.Types.ObjectId(),
     'date': '1476207426',
     'rate': 43,
     'paid': 'true'
   },
 ]
 
-const seedReviews = [
+export const seedReviews = [
   {
-    'guest_id': 33,
-    'listing_id': 73,
+    'guest_id': mongoose.Types.ObjectId(),
+    'listing_id': mongoose.Types.ObjectId(),
     'title': 'tempor erat neque non quam. Pellentesque habitant morbi tristique senectus',
     'text': 'metus. In lorem. Donec elementum, lorem ut aliquam iaculis, lacus pede sagittis augue, eu tempor erat neque non quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam fringilla cursus purus. Nullam scelerisque neque sed sem egestas blandit. Nam nulla magna, malesuada vel, convallis in,',
     'rating': 6,
-    'booking_id': 83,
+    'booking_id': mongoose.Types.ObjectId(),
   },
   {
-    'guest_id': 88,
-    'listing_id': 94,
+    'guest_id': mongoose.Types.ObjectId(),
+    'listing_id': mongoose.Types.ObjectId(),
     'title': 'Duis elementum, dui quis accumsan convallis, ante lectus convallis est,',
     'text': 'dolor. Fusce mi lorem, vehicula et, rutrum eu, ultrices sit amet, risus. Donec nibh enim, gravida sit amet, dapibus id, blandit at, nisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin vel nisl. Quisque fringilla euismod enim. Etiam gravida molestie arcu. Sed eu nibh vulputate',
     'rating': 1,
-    'booking_id': 70,
+    'booking_id': mongoose.Types.ObjectId(),
   },
   {
-    'guest_id': 67,
-    'listing_id': 89,
+    'guest_id': mongoose.Types.ObjectId(),
+    'listing_id': mongoose.Types.ObjectId(),
     'title': 'dictum cursus. Nunc mauris elit, dictum eu, eleifend nec, malesuada',
     'text': 'vel, faucibus id, libero. Donec consectetuer mauris id sapien. Cras dolor dolor, tempus non, lacinia at, iaculis quis, pede. Praesent eu dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eget magna. Suspendisse tristique neque venenatis lacus. Etiam bibendum fermentum metus. Aenean sed pede nec',
     'rating': 6,
-    'booking_id': 13,
+    'booking_id': mongoose.Types.ObjectId(),
   },
  {
-    'guest_id': 28,
-    'listing_id': 91,
+    'guest_id': mongoose.Types.ObjectId(),
+    'listing_id': mongoose.Types.ObjectId(),
     'title': 'ridiculus mus. Donec dignissim magna a tortor. Nunc commodo auctor',
     'text': 'Nullam velit dui, semper et, lacinia vitae, sodales at, velit. Pellentesque ultricies dignissim lacus. Aliquam rutrum lorem ac risus. Morbi metus. Vivamus euismod urna. Nullam lobortis quam a felis ullamcorper viverra. Maecenas iaculis aliquet diam. Sed diam lorem, auctor quis, tristique ac, eleifend vitae, erat. Vivamus nisi. Mauris nulla. Integer',
     'rating': 1,
-    'booking_id': 39,
+    'booking_id': mongoose.Types.ObjectId(),
   },
   {
-    'guest_id': 76,
-    'listing_id': 41,
+    'guest_id': mongoose.Types.ObjectId(),
+    'listing_id': mongoose.Types.ObjectId(),
     'title': 'dolor, nonummy ac, feugiat non, lobortis quis, pede. Suspendisse dui.',
     'text': 'Suspendisse sagittis. Nullam vitae diam. Proin dolor. Nulla semper tellus id nunc interdum feugiat. Sed nec metus facilisis lorem tristique aliquet. Phasellus fermentum convallis ligula. Donec luctus aliquet odio. Etiam ligula tortor, dictum eu, placerat eget, venenatis a, magna. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam laoreet, libero',
     'rating': 7,
-    'booking_id': 39,
+    'booking_id': mongoose.Types.ObjectId(),
   },
   {
-    'guest_id': 77,
-    'listing_id': 36,
+    'guest_id': mongoose.Types.ObjectId(),
+    'listing_id': mongoose.Types.ObjectId(),
     'title': 'velit. Pellentesque ultricies dignissim lacus. Aliquam rutrum lorem ac risus.',
     'text': 'quis, tristique ac, eleifend vitae, erat. Vivamus nisi. Mauris nulla. Integer urna. Vivamus molestie dapibus ligula. Aliquam erat volutpat. Nulla dignissim. Maecenas ornare egestas ligula. Nullam feugiat placerat velit. Quisque varius. Nam porttitor scelerisque neque. Nullam nisl. Maecenas malesuada fringilla est. Mauris eu turpis. Nulla aliquet. Proin velit. Sed malesuada',
     'rating': 7,
-    'booking_id': 71,
+    'booking_id': mongoose.Types.ObjectId(),
   },
 ]
-
-exports.seedUsers = seedUsers
-exports.seedReviews = seedReviews
-exports.seedListings = seedListings
-exports.seedBookings = seedBookings
-exports.seedReviews = seedReviews

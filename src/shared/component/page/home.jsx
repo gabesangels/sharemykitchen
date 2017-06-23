@@ -1,9 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import { withRouter } from 'react-router'
 
 import { APP_NAME } from '../../config'
+import Home from '../../container/home'
 
-const HomePage = () => {
+const HomePage = (props) => {
   return (
     <div>
       <Helmet
@@ -12,9 +15,13 @@ const HomePage = () => {
           { property: 'og:title', content: APP_NAME },
         ]}
       />
-      <p>Homies</p>
+      <Home history={props.history} />
     </div>
   )
 }
 
-export default HomePage
+HomePage.propTypes = {
+  history: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+}
+
+export default withRouter(HomePage)
