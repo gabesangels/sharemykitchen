@@ -17,18 +17,17 @@ class ListingList extends React.Component {
   }
 
   componentDidMount() {
-    var that = this
+    const that = this
     const url = `/api${LISTINGS_INDEX + this.props.query}`
     fetch(url)
       .then((response) => {
-         return response.json()
-        })
+        return response.json()
+      })
       .then((listings) => {
         that.setState({
-          listings: listings,
+          listings,
         })
       })
-      
   }
 
   render() {
