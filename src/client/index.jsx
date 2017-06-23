@@ -14,7 +14,6 @@ import authenticationReducer from '../shared/reducer/authentication'
 import listingsReducer from '../shared/reducer/listings'
 import { APP_CONTAINER_SELECTOR, RAVEN_PATH_CLIENT } from '../shared/config'
 import { isProd, currEnv } from '../shared/util'
-import '../shared/action/listings'
 
 // eslint-disable-next-line prefer-const
 let middlewares = [thunkMiddleware]
@@ -68,5 +67,3 @@ if (module.hot) {
     ReactDOM.render(wrapApp(NextApp, store), rootEl)
   })
 }
-
-window.store = store

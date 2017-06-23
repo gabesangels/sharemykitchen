@@ -13,7 +13,6 @@ import {
   LISTINGS_DELETE,
 } from '../../shared/routes'
 
-
 const router = express.Router()
 
 router.route(LISTINGS_INDEX).get((req, res, next) => {
@@ -57,7 +56,7 @@ router.route(LISTINGS_SHOW).get((req, res, next) => {
 
 router.route(LISTINGS_CREATE).post((req, res, next) => {
   const listing = new Listing(req.body)
-  console.log('listing: ', listing, req.body)
+
   listing
     .save()
     .then((newListing) => {

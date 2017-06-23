@@ -1,10 +1,8 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { withRouter } from 'react-router'
 
 import ListingsCreate from '../../container/listings-create'
 
-const ListingsCreatePage = (props) => {
+const ListingsCreatePage = () => {
   return (
     <div>
       <h2>Listings Create Page</h2>
@@ -13,4 +11,4 @@ const ListingsCreatePage = (props) => {
   )
 }
 
-export default withRouter(ListingsCreatePage)
+export default ListingsCreatePage

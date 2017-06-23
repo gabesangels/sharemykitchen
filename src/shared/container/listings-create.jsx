@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 import { listingsCreateAsync } from '../action/listings'
 
@@ -9,6 +10,10 @@ const ListingsCreate = (props) => {
       <input type="text" name="name" />
     </form>
   )
+}
+
+ListingsCreate.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
 }
 
 const mapDispatchToProps = (dispatch) => {

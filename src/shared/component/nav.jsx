@@ -9,7 +9,7 @@ import {
   HELLO_ASYNC_PAGE_ROUTE,
   NOT_FOUND_DEMO_PAGE_ROUTE,
   LISTINGS_INDEX,
-  LISTINGS_CREATE, 
+  LISTINGS_CREATE,
 } from '../routes'
 
 const Nav = () => {
