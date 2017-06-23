@@ -4,3 +4,4 @@ node_modules/
 /lib/
 /dist/
 .env
+package-lock.json
