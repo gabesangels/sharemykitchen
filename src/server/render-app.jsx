@@ -19,7 +19,6 @@ const renderApp = (location, plainPartialState, routerContext = {}) => {
       </StaticRouter>
     </Provider>)
   const head = Helmet.rewind()
-
   return (
     `<!doctype html>
     <html>

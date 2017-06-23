@@ -1,3 +1,15 @@
+export const populateUser = (user) => {
+  if (user) {
+    return {
+      authentication: {
+        isLoggedIn: true,
+        user,
+      },
+    }
+  }
+  return null
+}
+
 export const homePage = () => {
   return null
 }

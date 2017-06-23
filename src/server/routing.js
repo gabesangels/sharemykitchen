@@ -1,4 +1,5 @@
 import {
+  populateUser,
   homePage,
   helloPage,
   helloAsyncPage,
@@ -16,15 +17,30 @@ import renderApp from './render-app'
 
 export default (app) => {
   app.get(HOME_PAGE_ROUTE, (req, res) => {
-    res.send(renderApp(req.url, homePage()))
+    const partialState = Object.assign(
+      {},
+      populateUser(req.user),
+      homePage(),
+    )
+    res.send(renderApp(req.url, partialState))
   })
 
   app.get(HELLO_PAGE_ROUTE, (req, res) => {
-    res.send(renderApp(req.url, helloPage()))
+    const partialState = Object.assign(
+      {},
+      populateUser(req.user),
+      helloPage(),
+    )
+    res.send(renderApp(req.url, partialState))
   })
 
   app.get(HELLO_ASYNC_PAGE_ROUTE, (req, res) => {
-    res.send(renderApp(req.url, helloAsyncPage()))
+    const partialState = Object.assign(
+      {},
+      populateUser(req.user),
+      helloAsyncPage(),
+    )
+    res.send(renderApp(req.url, partialState))
   })
 
   app.get(helloEndpointRoute(), (req, res) => {
@@ -36,6 +52,10 @@ export default (app) => {
   })
 
   app.get('*', (req, res) => {
-    res.status(404).send(renderApp(req.url))
+    const partialState = Object.assign(
+      {},
+      populateUser(req.user),
+    )
+    res.status(404).send(renderApp(req.url, partialState))
   })
 }

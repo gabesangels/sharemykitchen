@@ -10,6 +10,7 @@ import { BrowserRouter } from 'react-router-dom'
 
 import App from '../shared/app'
 import helloReducer from '../shared/reducer/hello'
+import authenticationReducer from '../shared/reducer/authentication'
 import { APP_CONTAINER_SELECTOR, RAVEN_PATH_CLIENT } from '../shared/config'
 import { isProd, currEnv } from '../shared/util'
 
@@ -30,8 +31,11 @@ const preloadedState = window.__PRELOADED_STATE__
 /* eslint-disable no-underscore-dangle */
 
 const store = createStore(
-  combineReducers({ hello: helloReducer }),
-  { hello: preloadedState.hello },
+  combineReducers({ hello: helloReducer, authentication: authenticationReducer }),
+  {
+    hello: preloadedState.hello,
+    authentication: preloadedState.authentication,
+  },
   composeEnhancers(applyMiddleware(...middlewares)),
 )
 

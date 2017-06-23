@@ -1,5 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+
+import LoginLink from '../container/login-link'
+
 import {
   HOME_PAGE_ROUTE,
   HELLO_PAGE_ROUTE,
@@ -23,6 +26,9 @@ const Nav = () => {
             </li>
           )
         })}
+        <li>
+          <LoginLink />
+        </li>
       </ul>
     </nav>
   )
