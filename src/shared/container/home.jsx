@@ -5,6 +5,8 @@ import PropTypes from 'prop-types'
 import { DateRangePicker } from 'react-dates'
 import querystring from 'querystring'
 
+import { FEATURE_TYPES } from '../config'
+
 class Home extends React.Component {
   constructor(props) {
     super(props)
@@ -59,63 +61,10 @@ class Home extends React.Component {
               this.setState({ focusedInput })
             }}
           />
-          {[
-            {
-              header: 'Stove Type',
-              children: [
-                { name: 'stove', label: 'Gas Stove', value: 'gas' },
-                { name: 'stove', label: 'Electric Stove', value: 'electric' },
-                { name: 'stove', label: 'No Preference', value: '' },
-              ],
-            },
-            {
-              header: 'Oven Type',
-              children: [
-                { name: 'oven', label: 'Gas Oven', value: 'gas' },
-                { name: 'oven', label: 'Electric Oven', value: 'electric' },
-                { name: 'oven', label: 'No Preference', value: '' },
-              ],
-            },
-            {
-              header: 'Mixer Type',
-              children: [
-                { name: 'mixer', label: 'KitchenAid', value: 'kitchenaid' },
-                { name: 'mixer', label: 'Other Mixer', value: 'other' },
-                { name: 'mixer', label: 'No Preference', value: '' },
-              ],
-            },
-            {
-              header: 'Blender Type',
-              children: [
-                { name: 'blender', label: 'Vitamix Blender', value: 'vitamix' },
-                { name: 'blender', label: 'Other Blender', value: 'other' },
-                { name: 'blender', label: 'No Preference', value: '' },
-              ],
-            },
-            {
-              header: 'Refrigerator Type',
-              children: [
-                {
-                  name: 'refrigerator',
-                  label: 'Stainless Steel Refrigerator',
-                  value: 'stainless',
-                },
-                {
-                  name: 'refrigerator',
-                  label: 'Black Refrigerator',
-                  value: 'black',
-                },
-                {
-                  name: 'refrigerator',
-                  label: 'No Preference',
-                  value: '',
-                },
-              ],
-            },
-          ].map((feature, i) => {
+          {FEATURE_TYPES.map((feature, i) => {
             return (
               <div key={i}>
-                <h3>{feature.header}</h3>
+                <h3>{feature.type}</h3>
                 {feature.children.map((child, j) => {
                   return (
                     <label key={j} htmlFor={child.name}>

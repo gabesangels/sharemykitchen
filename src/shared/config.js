@@ -18,3 +18,58 @@ export const APP_NAME = 'Greenfield Project'
 
 export const APP_CONTAINER_CLASS = 'js-app'
 export const APP_CONTAINER_SELECTOR = `.${APP_CONTAINER_CLASS}`
+
+export const FEATURE_TYPES = [
+  {
+    type: 'Stove Type',
+    children: [
+      { name: 'stove', label: 'No Preference', value: '' },
+      { name: 'stove', label: 'Gas Stove', value: 'gas' },
+      { name: 'stove', label: 'Electric Stove', value: 'electric' },
+    ],
+  },
+  {
+    type: 'Oven Type',
+    children: [
+      { name: 'oven', label: 'No Preference', value: '' },
+      { name: 'oven', label: 'Gas Oven', value: 'gas' },
+      { name: 'oven', label: 'Electric Oven', value: 'electric' },
+    ],
+  },
+  {
+    type: 'Mixer Type',
+    children: [
+      { name: 'mixer', label: 'No Preference', value: '' },
+      { name: 'mixer', label: 'KitchenAid', value: 'kitchenaid' },
+      { name: 'mixer', label: 'Other Mixer', value: 'other' },
+    ],
+  },
+  {
+    type: 'Blender Type',
+    children: [
+      { name: 'blender', label: 'No Preference', value: '' },
+      { name: 'blender', label: 'Vitamix Blender', value: 'vitamix' },
+      { name: 'blender', label: 'Other Blender', value: 'other' },
+    ],
+  },
+  {
+    type: 'Refrigerator Type',
+    children: [
+      {
+        name: 'refrigerator',
+        label: 'No Preference',
+        value: '',
+      },
+      {
+        name: 'refrigerator',
+        label: 'Stainless Steel Refrigerator',
+        value: 'stainless',
+      },
+      {
+        name: 'refrigerator',
+        label: 'Black Refrigerator',
+        value: 'black',
+      },
+    ],
+  },
+]

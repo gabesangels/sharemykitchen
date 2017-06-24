@@ -1,17 +1,20 @@
 import React from 'react'
 import { withRouter } from 'react-router'
+import PropTypes from 'prop-types'
 
 import ListingsCreate from '../../container/listings-create'
-import BookingsCreate from '../../container/bookings-create'
 
-const ListingsCreatePage = () => {
+const ListingsCreatePage = (props) => {
   return (
     <div>
       <h2>Listings Create Page</h2>
-      <ListingsCreate />
-      <BookingsCreate label="Book now" listing_id="594d7260f660a4e05e055457" />
+      <ListingsCreate history={props.history} />
     </div>
   )
+}
+
+ListingsCreatePage.propTypes = {
+  history: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
 }
 
 export default withRouter(ListingsCreatePage)

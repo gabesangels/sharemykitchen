@@ -22,6 +22,7 @@ export const listingsCreateAsync = (listing) => {
     dispatch(listingsCreateAsyncRequest())
     return fetch(`/api${LISTINGS_CREATE}`, {
       method: 'POST',
+      credentials: 'same-origin',
       headers: {
         'Content-Type': 'application/json',
       },
@@ -33,6 +34,7 @@ export const listingsCreateAsync = (listing) => {
       })
       .then((data) => {
         dispatch(listingsCreateAsyncSuccess(data))
+        return data
       })
       .catch(() => {
         dispatch(listingsCreateAsyncFailure())
