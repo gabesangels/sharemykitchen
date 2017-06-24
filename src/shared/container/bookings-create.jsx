@@ -1,19 +1,11 @@
-import React from 'react'
 import { connect } from 'react-redux'
-import PropTypes from 'prop-types'
 
+import Button from '../component/button'
 import { bookingsCreateAsync } from '../action/bookings'
-
-const BookingsCreate = (props) => {
-  console.log(props)
-  return (
-    <button onClick={props.onClick} >{props.label}</button>
-  )
-}
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    onClick: () => {
+    handleClick: () => {
       const booking = {
         listing_id: ownProps.listing_id,
       }
@@ -22,7 +14,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   }
 }
 
-BookingsCreate.propTypes = { onClick: PropTypes.func.isRequired, label: PropTypes.string.isRequired }
-
-
-export default connect(null, mapDispatchToProps)(BookingsCreate)
+export default connect(null, mapDispatchToProps)(Button)

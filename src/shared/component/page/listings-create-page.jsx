@@ -1,11 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { withRouter } from 'react-router'
 
 import ListingsCreate from '../../container/listings-create'
 import BookingsCreate from '../../container/bookings-create'
 
-const ListingsCreatePage = (props) => {
+const ListingsCreatePage = () => {
   return (
     <div>
       <h2>Listings Create Page</h2>

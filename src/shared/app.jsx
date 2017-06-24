@@ -34,8 +34,8 @@ const App = () => {
         <Route exact path={HOME_PAGE_ROUTE} render={() => <HomePage />} />
         <Route path={HELLO_PAGE_ROUTE} render={() => <HelloPage />} />
         <Route path={HELLO_ASYNC_PAGE_ROUTE} render={() => <HelloAsyncPage />} />
-        <Route path={LISTINGS_SHOW} render={() => <ListingDetailPage />} />
         <Route path={LISTINGS_CREATE} render={() => <ListingsCreatePage />} />
+        <Route path={LISTINGS_SHOW} render={() => <ListingDetailPage />} />
         <Route path={LISTINGS_INDEX} render={() => <ListingsPage />} />
         <Route render={() => <NotFoundPage />} />
       </Switch>

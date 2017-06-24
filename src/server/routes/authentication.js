@@ -50,6 +50,7 @@ passport.deserializeUser((id, done) => {
     .findById(id)
     .then((user) => {
       done(null, {
+        _id: user._id,
         name: user.name || undefined,
         email: user.email || undefined,
         picture: `//graph.facebook.com/${user.facebook_uid}/picture?width=150&height=150`,

@@ -43,8 +43,8 @@ router.route(BOOKINGS_SHOW).get((req, res, next) => {
 })
 
 router.post(BOOKINGS_CREATE, authRequired, (req, res, next) => {
-  const booking = new Booking(Object.assign({}, req.body, { user_id: req.user._id }))
-  console.log(Object.assign({}, req.body, { user_id: req.user}))
+  const booking = new Booking(Object.assign({}, req.body, { guest_id: req.user._id }))
+
   booking
     .save()
     .then((newBooking) => {
@@ -52,6 +52,7 @@ router.post(BOOKINGS_CREATE, authRequired, (req, res, next) => {
     })
     .catch(next)
 })
+
 router.route(BOOKINGS_UPDATE).put((req, res, next) => {
   const { id } = req.params
   if (!mongoose.Types.ObjectId.isValid(id)) {
