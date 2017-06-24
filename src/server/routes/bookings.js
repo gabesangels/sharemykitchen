@@ -2,6 +2,7 @@ import express from 'express'
 import mongoose from 'mongoose'
 
 import Booking from '../db/models/booking'
+import authRequired from '../middlewares/authRequired'
 
 import {
   BOOKINGS_INDEX,
@@ -41,9 +42,9 @@ router.route(BOOKINGS_SHOW).get((req, res, next) => {
     .catch(next)
 })
 
-router.route(BOOKINGS_CREATE).post((req, res, next) => {
-  const booking = new Booking(req.body)
-
+router.post(BOOKINGS_CREATE, authRequired, (req, res, next) => {
+  const booking = new Booking(Object.assign({}, req.body, { user_id: req.user._id }))
+  console.log(Object.assign({}, req.body, { user_id: req.user}))
   booking
     .save()
     .then((newBooking) => {
