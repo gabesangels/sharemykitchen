@@ -17,7 +17,7 @@ const HomePageCarousel = function(props) {
                     <label className="item-next btn btn-action btn-lg" htmlFor="slide-2">
                       <i className="icon icon-arrow-right"></i>
                     </label>
-                    <img src="http://hbu.h-cdn.co/assets/17/08/1600x800/landscape-1487797639-rebekah-zaveloff-kitchen.jpg" className="img-responsive rounded" alt="macOS Yosemite Wallpaper" />
+                    <img src="http://www.loversiq.com/daut/as/f/k/kitchen-modern-white-cabinets-making-your-look-picture-cabinet-also-kitchne_beautiful-white-kitchens_home-decor_unique-home-decor-sincere-websites-fabric-decorating-blogs-catalog-blog-fall-catalogs.jpg" className="img-responsive rounded" alt="macOS Yosemite Wallpaper" />
                   </figure>
 
                   <figure className="carousel-item">
