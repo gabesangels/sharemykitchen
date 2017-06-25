@@ -9,7 +9,7 @@ const ListingsPage = (props) => {
   const qs = props.location.search
   return (
     <div>
-      <h2>Available Listings</h2>
+      <h2 className="text-center">Available Listings</h2>
       <ListingList query={qs} />
     </div>
   )

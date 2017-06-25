@@ -6,6 +6,7 @@ import { DateRangePicker } from 'react-dates'
 import querystring from 'querystring'
 
 import { FEATURE_TYPES } from '../config'
+import HomePageCarousel from '../component/home-page-carousel'
 
 class Home extends React.Component {
   constructor(props) {
@@ -47,42 +48,63 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.onSubmit}>
-          <h3> Pick Your Dates </h3>
-          <DateRangePicker
-            startDate={this.state.startDate}
-            endDate={this.state.endDate}
-            onDatesChange={({ startDate, endDate }) => {
-              this.setState({ startDate, endDate })
-            }}
-            focusedInput={this.state.focusedInput}
-            onFocusChange={(focusedInput) => {
-              this.setState({ focusedInput })
-            }}
-          />
-          {FEATURE_TYPES.map((feature, i) => {
-            return (
-              <div key={i}>
-                <h3>{feature.type}</h3>
-                {feature.children.map((child, j) => {
-                  return (
-                    <label key={j} htmlFor={child.name}>
-                      <input
-                        type="radio"
-                        name={child.name}
-                        value={child.value}
-                        onChange={this.onChange}
-                      />
-                      {child.label}
-                    </label>
-                  )
-                })}
+      <div className="container">
+        <div className="columns">
+          <div className="col-12 text-center">
+            <form onSubmit={this.onSubmit}>
+              <h3> Welcome! </h3>
+              <HomePageCarousel />
+              <p>Share My Kitchen is a place where foodies and entertainers can
+              make their spaces and tools available to like-minded individuals.
+              </p>
+              <p>Looking for a kitchen to use for your next event or project?<br />
+              Scroll down to customize your search.<br />
+              Interested in advertising your fabulous space?<br />
+              Click the host button above to get started!
+              </p>
+              <div className="divider" />
+              <h4> Pick your dates: </h4>
+              <DateRangePicker
+                startDate={this.state.startDate}
+                endDate={this.state.endDate}
+                onDatesChange={({ startDate, endDate }) => {
+                  this.setState({ startDate, endDate })
+                }}
+                focusedInput={this.state.focusedInput}
+                onFocusChange={(focusedInput) => {
+                  this.setState({ focusedInput })
+                }}
+              />
+              <div className="divider" />
+              <h4> Pick your features: </h4>
+              <div className="container">
+                <div className="columns">
+                  {FEATURE_TYPES.map((feature, i) => {
+                    return (
+                      <div key={i} className="col-2 centered">
+                        <h5>{feature.type}</h5>
+                        {feature.children.map((child, j) => {
+                          return (
+                            <label className="centered" key={j} htmlFor={child.name}>
+                              <input
+                                type="radio"
+                                name={child.name}
+                                value={child.value}
+                                onChange={this.onChange}
+                              />
+                              {child.label}
+                            </label>
+                          )
+                        })}
+                      </div>
+                    )
+                  })}
+                </div>
               </div>
-            )
-          })}
-          <button type="submit">Submit</button>
-        </form>
+              <button className="btn btn-lg" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
       </div>
     )
   }

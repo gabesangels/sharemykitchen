@@ -18,6 +18,9 @@ export default {
     rules: [
       { test: /\.(js|jsx)$/, use: 'babel-loader', exclude: /node_modules/ },
     ],
+    loaders: [
+      { test: /\.css$/, loader: 'style-loader!css-loader' },
+    ],
   },
   devtool: isProd ? false : 'source-map',
   resolve: {

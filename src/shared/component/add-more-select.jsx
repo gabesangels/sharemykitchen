@@ -51,7 +51,7 @@ class AddMoreSelect extends PureComponent {
             </p>
           )
         })}
-        <select onChange={this.onChangeKey}>
+        <select onChange={this.onChangeKey} className="form-select">
           {this.props.options.map((option) => {
             return (
               <option
@@ -63,7 +63,7 @@ class AddMoreSelect extends PureComponent {
             )
           })}
         </select>
-        <select onChange={this.onChangeValue}>
+        <select onChange={this.onChangeValue} className="form-select">
           {this.state.options[this.state.currentKey].children.map((option) => {
             return (
               <option
@@ -77,10 +77,12 @@ class AddMoreSelect extends PureComponent {
           })}
         </select>
         <br />
+        <br />
         <button
           type="button"
           onClick={this.onClick}
           disabled={!this.state.currentVal}
+          className="btn"
         >
           Add Feature
         </button>

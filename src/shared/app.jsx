@@ -25,9 +25,9 @@ import ListingsCreatePage from './component/page/listings-create-page'
 
 const App = () => {
   return (
-    <div>
+    <div className="main">
       <Helmet titleTemplate={`%s | ${APP_NAME}`} defaultTitle={APP_NAME} />
-      <h1>{APP_NAME}</h1>
+      <h1 className="text-center">{APP_NAME}</h1>
       <Nav />
       <Switch>
         <Route exact path={HOME_PAGE_ROUTE} render={() => <HomePage />} />

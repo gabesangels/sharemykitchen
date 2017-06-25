@@ -1,11 +1,14 @@
 import compression from 'compression'
 import express from 'express'
 import session from 'express-session'
+import { Server } from 'http'
+import socketIO from 'socket.io'
 import bodyParser from 'body-parser'
 import Raven from 'raven'
 import passport from 'passport'
 import './db/'
 
+import setUpSocket from './set-up-socket'
 import authenticationRoute from './routes/authentication'
 import bookingsRoute from './routes/bookings'
 import listingsRoute from './routes/listings'
@@ -22,6 +25,9 @@ if (RAVEN_PATH_SERVER) {
 }
 
 const app = express()
+const http = Server(app)
+const io = socketIO(http)
+setUpSocket(io)
 
 app.use(bodyParser.json())
 app.use(compression())
@@ -47,7 +53,7 @@ app.use((err, req, res, next) => {
   res.sendStatus(500)
 })
 
-!module.parent && app.listen(WEB_PORT, () => {
+!module.parent && http.listen(WEB_PORT, () => {
   console.log(`Server is running on port ${WEB_PORT} (${currEnv}).`)
   currEnv === 'development' && console.log('Keep "yarn dev:wds" running on a separate terminal')
 })

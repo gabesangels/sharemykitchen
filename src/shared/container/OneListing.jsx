@@ -29,20 +29,26 @@ class OneListing extends React.Component {
     const listing = this.state.listing
     return listing ?
       (
-        <div className="one-listing">
+        <div className="card">
           <h2>{listing.name}</h2>
-          <div>
-            <img src={listing.pictures[0]} alt="kitchen" />
-            <h3>Features</h3>
-            <ul>
-              {Object.keys(listing.features).map((keyValue) => {
-                return <li key={keyValue}>{keyValue}</li>
-              })}
-            </ul>
-            <h3>Rating</h3>
-            <p>{listing.rating}</p>
-            <h3>Area:</h3>
-            <p>{listing.area}</p>
+          <div className="columns one-line">
+            <div className="col-3 card-image">
+              <img className="listing-pic" src={listing.pictures[0]} alt="kitchen" />
+            </div>
+            <div className="col-3">
+              <h3>Features</h3>
+              <ul>
+                {Object.keys(listing.features).map((key) => {
+                  return <li key={key}><strong>{key}:</strong> {listing.features[key]}</li>
+                })}
+              </ul>
+            </div>
+            <div className="col-3">
+              <h3>Rating</h3>
+              <p>{listing.rating}</p>
+              <h3>Area:</h3>
+              <p>{listing.area}</p>
+            </div>
           </div>
         </div>
       )

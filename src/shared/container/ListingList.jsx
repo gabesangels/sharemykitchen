@@ -33,14 +33,18 @@ class ListingList extends React.Component {
   render() {
     return (
       <div className="listing-list">
-        {this.state.listings.map((kitchen) => {
-          return (
-            <Listing
-              key={kitchen._id}
-              kitchen={kitchen}
-            />
-          )
-        })}
+        <div className="divider">
+          <div className="columns one-line">
+            {this.state.listings.map((kitchen) => {
+              return (
+                <Listing
+                  key={kitchen._id}
+                  kitchen={kitchen}
+                />
+              )
+            })}
+          </div>
+        </div>
       </div>
     )
   }

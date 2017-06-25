@@ -1,5 +1,5 @@
 body {
-  width: 960px;
+  width: 100%;
   margin: auto;
   font-family: sans-serif;
 }
@@ -10,6 +10,12 @@ h1 {
 
 .listing-list {
 
+}
+
+.card {
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .one-listing {
