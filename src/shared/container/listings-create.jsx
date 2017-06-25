@@ -31,39 +31,46 @@ class ListingsCreate extends Component {
 
   render() {
     return (
-      <form onSubmit={this.onSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          onChange={this.onChange}
-        />
-        <br />
-        <input
-          type="address"
-          name="address"
-          placeholder="Address"
-          onChange={this.onChange}
-        />
-        <br />
-        <input
-          type="number"
-          name="rate"
-          placeholder="Rate"
-          onChange={this.onChange}
-        />
-        <br />
-        <input
-          type="text"
-          name="area"
-          placeholder="Area"
-          onChange={this.onChange}
-        />
-        <br />
-        <AddMoreSelect onChange={this.onAddMoreSelectChange} />
-        <br />
-        <input type="submit" value="Post" />
-      </form>
+      <div className="col-12 text-center">
+        <form onSubmit={this.onSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            onChange={this.onChange}
+          />
+          <br />
+          <br />
+          <input
+            type="address"
+            name="address"
+            placeholder="Address"
+            onChange={this.onChange}
+          />
+          <br />
+          <br />
+          <input
+            type="number"
+            name="rate"
+            placeholder="Rate (USD/day)"
+            onChange={this.onChange}
+          />
+          <br />
+          <br />
+          <input
+            type="text"
+            name="area"
+            placeholder="Area"
+            onChange={this.onChange}
+          />
+          <br />
+          <br />
+          <AddMoreSelect onChange={this.onAddMoreSelectChange} />
+          <br />
+          <br />
+          <input type="submit" value="Post" />
+        </form>
+      </div>
     )
   }
 }

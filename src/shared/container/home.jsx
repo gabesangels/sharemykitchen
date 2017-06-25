@@ -54,6 +54,14 @@ class Home extends React.Component {
             <form onSubmit={this.onSubmit}>
               <h3> Welcome! </h3>
               <HomePageCarousel />
+              <p>Share My Kitchen is a place where foodies and entertainers can
+              make their spaces and tools available to like-minded individuals.
+              </p>
+              <p>Looking for a kitchen to use for your next event or project?<br />
+              Scroll down to customize your search.<br />
+              Interested in advertising your fabulous space?<br />
+              Click the host button above to get started!
+              </p>
               <div className="divider"></div>
               <h4> Pick your dates: </h4>
               <DateRangePicker
