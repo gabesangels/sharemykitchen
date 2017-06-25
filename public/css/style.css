@@ -8,12 +8,14 @@ h1 {
   color: limegreen;
 }
 
-.main {
-  margin: 0 auto;
-}
-
 .listing-list {
 
+}
+
+.card {
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .one-listing {

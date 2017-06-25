@@ -6,7 +6,7 @@ import { listingsShowRoute } from '../routes'
 
 const Listing = (props) => {
   return (
-    <div className="card mt-10 mr-10 ml-10 col-5">
+    <div className="card col-5">
       <Link
         className="one-listing"
         to={`${listingsShowRoute(props.kitchen._id)}`}
