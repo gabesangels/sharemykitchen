@@ -51,7 +51,7 @@ class AddMoreSelect extends PureComponent {
             </p>
           )
         })}
-        <select onChange={this.onChangeKey} className="form-select text-center">
+        <select onChange={this.onChangeKey} className="form-select">
           {this.props.options.map((option) => {
             return (
               <option

@@ -8,7 +8,7 @@ const ListingsCreatePage = (props) => {
   return (
     <div>
       <h2 className="text-center">Share your kitchen!</h2>
-      <div className="divider"></div>
+      <div className="divider" />
       <ListingsCreate history={props.history} />
     </div>
   )

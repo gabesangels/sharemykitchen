@@ -26,11 +26,11 @@ const Listing = (props) => {
             <strong>Area:</strong> {props.kitchen.area} <br />
             <strong>Rating:</strong> {props.kitchen.rating} <br />
             <strong>Features:</strong>
-              <ul>
-                {Object.keys(props.kitchen.features).map((key, index) => {
-                  return <li key={index}><strong>{key}:</strong> {props.kitchen.features[key]}</li>
-                })}
-              </ul>
+            <ul>
+              {Object.keys(props.kitchen.features).map((key) => {
+                return <li key={key}><strong>{key}:</strong> {props.kitchen.features[key]}</li>
+              })}
+            </ul>
           </div>
         </div>
       </Link>

@@ -62,7 +62,7 @@ class Home extends React.Component {
               Interested in advertising your fabulous space?<br />
               Click the host button above to get started!
               </p>
-              <div className="divider"></div>
+              <div className="divider" />
               <h4> Pick your dates: </h4>
               <DateRangePicker
                 startDate={this.state.startDate}
@@ -75,7 +75,7 @@ class Home extends React.Component {
                   this.setState({ focusedInput })
                 }}
               />
-              <div className="divider"></div>
+              <div className="divider" />
               <h4> Pick your features: </h4>
               <div className="container">
                 <div className="columns">
@@ -101,7 +101,7 @@ class Home extends React.Component {
                   })}
                 </div>
               </div>
-              <button className="btn" type="submit">Submit</button>
+              <button className="btn btn-lg" type="submit">Submit</button>
             </form>
           </div>
         </div>

@@ -38,8 +38,8 @@ class OneListing extends React.Component {
             <div className="col-3">
               <h3>Features</h3>
               <ul>
-                {Object.keys(listing.features).map((key, index) => {
-                  return <li key={index}><strong>{key}:</strong> {listing.features[key]}</li>
+                {Object.keys(listing.features).map((key) => {
+                  return <li key={key}><strong>{key}:</strong> {listing.features[key]}</li>
                 })}
               </ul>
             </div>
