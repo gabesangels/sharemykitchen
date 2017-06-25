@@ -3,14 +3,14 @@ import 'babel-polyfill'
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import io from 'socket.io-client'
+import ss from 'socket.io-stream'
 
 import { listingsCreateAsync } from '../action/listings'
 import AddMoreSelect from '../component/add-more-select'
 
 import { listingsShowRoute } from '../routes'
 
-import io from 'socket.io-client'
-import ss from 'socket.io-stream'
 const socket = io.connect('http://localhost:8000')
 
 class ListingsCreate extends Component {
@@ -23,9 +23,7 @@ class ListingsCreate extends Component {
   }
 
   componentDidMount() {
-    socket.on('LISTING_PICTURE_PROGRESS', (progress) => {
-      console.log(progress)
-    })
+    socket.on('LISTING_PICTURE_PROGRESS', () => {})
   }
 
   onSubmit(e) {
@@ -41,6 +39,7 @@ class ListingsCreate extends Component {
     this.setState({ features })
   }
 
+  // eslint-disable-next-line class-methods-use-this
   onFileChange(e) {
     const file = e.target.files[0]
     const stream = ss.createStream()
@@ -85,9 +84,9 @@ class ListingsCreate extends Component {
           />
           <br />
           <br />
-          <input 
+          <input
             type="file"
-            onChange={this.onFileChange} 
+            onChange={this.onFileChange}
           />
           <br />
           <br />

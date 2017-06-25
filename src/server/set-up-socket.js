@@ -5,6 +5,7 @@ import ss from 'socket.io-stream'
 
 import {
   IO_CONNECT,
+  IO_DISCONNECT,
   LISTING_PICTURE,
   LISTING_PICTURE_START,
   LISTING_PICTURE_PROGRESS,
@@ -22,7 +23,7 @@ const setUpSocket = (io) => {
   io.on(IO_CONNECT, (socket) => {
     console.log('[socket.io] A client connected.')
 
-    ss(socket).on(LISTING_PICTURE, (stream, data) => {
+    ss(socket).on(LISTING_PICTURE, (stream) => {
       const key = +new Date()
       socket.emit(LISTING_PICTURE_START, key)
       console.log('[socket.io] uploading key: ', key)
@@ -36,11 +37,11 @@ const setUpSocket = (io) => {
       })
 
       upload.on('httpUploadProgress', (progress) => {
-        console.log(`[socket.io] current progress of ${progress.key}: ${progress.loaded/progress.total*100}%`)
+        console.log(`[socket.io] current progress of ${progress.key}: ${(progress.loaded / progress.total) * 100}%`)
         socket.emit(LISTING_PICTURE_PROGRESS, progress)
       })
 
-      upload.send((err, data) => {
+      upload.send((err) => {
         if (err) {
           console.log('error:', err)
           socket.emit(LISTING_PICTURE_FAILURE)
@@ -49,6 +50,10 @@ const setUpSocket = (io) => {
         console.log('success')
         socket.emit(LISTING_PICTURE_SUCCESS)
       })
+    })
+
+    socket.on(IO_DISCONNECT, () => {
+      console.log('[socket.io] A client disconnected.')
     })
   })
 }
