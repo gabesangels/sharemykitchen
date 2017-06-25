@@ -26,6 +26,7 @@ const renderApp = (location, plainPartialState, routerContext = {}) => {
         ${head.title}
         ${head.meta}
         <link rel="stylesheet" href="${STATIC_PATH}/css/style.css">
+        <link rel="stylesheet" href="${STATIC_PATH}/css/date-picker.css">
         <link rel="stylesheet" href="${STATIC_PATH}/css/spectre.min.css">
         <link rel="stylesheet" href="${STATIC_PATH}/css/spectre-icons.min.css">
         <link rel="stylesheet" href="${STATIC_PATH}/css/spectre-exp.min.css">
