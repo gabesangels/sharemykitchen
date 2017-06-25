@@ -67,8 +67,7 @@ class ListingsCreate extends Component {
           <br />
           <AddMoreSelect onChange={this.onAddMoreSelectChange} />
           <br />
-          <br />
-          <input type="submit" value="Post" />
+          <input className="btn btn-lg" type="submit" value="Post" />
         </form>
       </div>
     )

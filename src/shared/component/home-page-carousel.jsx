@@ -55,7 +55,7 @@ const HomePageCarousel = () => {
               <label className="item-next btn btn-action btn-lg" htmlFor="slide-3">
                 <i className="icon icon-arrow-right" />
               </label>
-              <img src="https://cdn.homebnc.com/homeimg/2016/02/13-contemporary-elegant-kitchen-cabinet-ideas-homebnc.jpg" className="img-responsive rounded" alt="macOS Yosemite Wallpaper" />
+              <img src="http://ak.c.ooyala.com/04dmdyNDE6mgcTfOELslxVRP0bCgPr43/promo292876389" className="img-responsive rounded" alt="macOS Yosemite Wallpaper" />
             </figure>
 
             <figure className="carousel-item">
@@ -65,7 +65,7 @@ const HomePageCarousel = () => {
               <label className="item-next btn btn-action btn-lg" htmlFor="slide-4">
                 <i className="icon icon-arrow-right" />
               </label>
-              <img src="http://cdn.decoist.com/wp-content/uploads/2016/05/Transitional-kitchen-with-blue-cabinets-and-a-copper-glint.jpg" className="img-responsive rounded" alt="macOS Yosemite Wallpaper" />
+              <img src="http://clv.h-cdn.co/assets/16/32/perfect-fit-kitchen-0916.jpg" className="img-responsive rounded" alt="macOS Yosemite Wallpaper" />
             </figure>
 
             <figure className="carousel-item">
@@ -75,7 +75,7 @@ const HomePageCarousel = () => {
               <label className="item-next btn btn-action btn-lg" htmlFor="slide-1">
                 <i className="icon icon-arrow-right" />
               </label>
-              <img src="http://www.freshpalace.com/wp-content/uploads/2014/04/Plants-Sofa-Dining-Kitchen-Loft-Style-Home-Terrassa-Spain.jpg" className="img-responsive rounded" alt="macOS Yosemite Wallpaper" />
+              <img src="http://www.remodelingdiy.com/wp-content/uploads/2016/06/remodeling-a-small-kitchen.jpg" className="img-responsive rounded" alt="macOS Yosemite Wallpaper" />
             </figure>
           </div>
           <div className="carousel-nav">

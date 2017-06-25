@@ -1,11 +1,15 @@
 body {
-  width: 960px;
+  width: 100%;
   margin: auto;
   font-family: sans-serif;
 }
 
 h1 {
   color: limegreen;
+}
+
+.main {
+  margin: 0 auto;
 }
 
 .listing-list {
