@@ -1,3 +1,5 @@
+import 'babel-polyfill'
+
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
@@ -7,6 +9,10 @@ import AddMoreSelect from '../component/add-more-select'
 
 import { listingsShowRoute } from '../routes'
 
+import io from 'socket.io-client'
+import ss from 'socket.io-stream'
+const socket = io.connect('http://localhost:8000')
+
 class ListingsCreate extends Component {
   constructor(props) {
     super(props)
@@ -14,6 +20,12 @@ class ListingsCreate extends Component {
     this.onSubmit = this.onSubmit.bind(this)
     this.onChange = this.onChange.bind(this)
     this.onAddMoreSelectChange = this.onAddMoreSelectChange.bind(this)
+  }
+
+  componentDidMount() {
+    socket.on('LISTING_PICTURE_PROGRESS', (progress) => {
+      console.log(progress)
+    })
   }
 
   onSubmit(e) {
@@ -27,6 +39,14 @@ class ListingsCreate extends Component {
 
   onAddMoreSelectChange(features) {
     this.setState({ features })
+  }
+
+  onFileChange(e) {
+    const file = e.target.files[0]
+    const stream = ss.createStream()
+
+    ss(socket).emit('LISTING_PICTURE', stream)
+    ss.createBlobReadStream(file).pipe(stream)
   }
 
   render() {
@@ -62,6 +82,12 @@ class ListingsCreate extends Component {
             name="area"
             placeholder="Area"
             onChange={this.onChange}
+          />
+          <br />
+          <br />
+          <input 
+            type="file"
+            onChange={this.onFileChange} 
           />
           <br />
           <br />
