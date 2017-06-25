@@ -4,6 +4,7 @@ import express from 'express'
 import mongoose from 'mongoose'
 
 import Listing from '../db/models/listing'
+import authRequired from '../middlewares/authRequired'
 
 import {
   LISTINGS_INDEX,
@@ -54,8 +55,8 @@ router.route(LISTINGS_SHOW).get((req, res, next) => {
     .catch(next)
 })
 
-router.route(LISTINGS_CREATE).post((req, res, next) => {
-  const listing = new Listing(req.body)
+router.post(LISTINGS_CREATE, authRequired, (req, res, next) => {
+  const listing = new Listing(Object.assign({}, req.body, { host_id: req.user._id }))
 
   listing
     .save()
