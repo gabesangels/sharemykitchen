@@ -15,22 +15,20 @@ import {
 const Nav = () => {
   return (
     <nav>
-      <ul>
+      <ul className = "breadcrumb text-center">
         {[
           { route: HOME_PAGE_ROUTE, label: 'Home' },
-          { route: HELLO_PAGE_ROUTE, label: 'Say Hello' },
-          { route: HELLO_ASYNC_PAGE_ROUTE, label: 'Say Hello Async' },
           { route: LISTINGS_INDEX, label: 'listings' },
           { route: LISTINGS_CREATE, label: 'Create a listing' },
           { route: NOT_FOUND_DEMO_PAGE_ROUTE, label: '404 Demo' },
         ].map((link) => {
           return (
-            <li key={link.route}>
+            <li className = "breadcrumb-item" key={link.route}>
               <NavLink to={link.route} activeStyle={{ color: 'limegreen' }} exact>{link.label}</NavLink>
             </li>
           )
         })}
-        <li>
+        <li className = "breadcrumb-item">
           <LoginLink />
         </li>
       </ul>

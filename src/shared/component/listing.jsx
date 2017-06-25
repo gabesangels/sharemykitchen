@@ -6,29 +6,33 @@ import { listingsShowRoute } from '../routes'
 
 const Listing = (props) => {
   return (
-    <Link
-      className="one-listing"
-      to={`${listingsShowRoute(props.kitchen._id)}`}
-    >
-      <h2>
-        {props.kitchen.name}
-      </h2>
-      <img
-        className="listing-pic"
-        src={props.kitchen.pictures[0]}
-        alt="kitchen"
-      />
-      <div className="listing-details">
-        Area: {props.kitchen.area} <br />
-        Rating: {props.kitchen.rating} <br />
-        Features:
-          <ul>
-            {Object.keys(props.kitchen.features).map((keyValue) => {
-              return <li key={keyValue}>{keyValue}</li>
-            })}
-          </ul>
-      </div>
-    </Link>
+    <div className="card">
+      <Link
+        className="one-listing"
+        to={`${listingsShowRoute(props.kitchen._id)}`}
+      >
+        <h2 className="card-header col-12">
+          {props.kitchen.name}
+        </h2>
+        <div className="columns col-online">
+          <img
+            className="listing-pic column center"
+            src={props.kitchen.pictures[0]}
+            alt="kitchen"
+          />
+          <div className="card-body text-center column">
+            <strong>Area:</strong> {props.kitchen.area} <br />
+            <strong>Rating:</strong> {props.kitchen.rating} <br />
+            <strong>Features:</strong>
+              <ul>
+                {Object.keys(props.kitchen.features).map((keyValue) => {
+                  return <li key={keyValue}>{keyValue}</li>
+                })}
+              </ul>
+          </div>
+        </div>
+      </Link>
+    </div>
   )
 }
 

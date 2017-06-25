@@ -14,7 +14,7 @@ export const FACEBOOK_CALLBACK_URL = process.env.FACEBOOK_CALLBACK_URL
 
 export const COOKIE_SECRET = process.env.COOKIE_SECRET
 
-export const APP_NAME = 'Greenfield Project'
+export const APP_NAME = 'Share My Kitchen'
 
 export const APP_CONTAINER_CLASS = 'js-app'
 export const APP_CONTAINER_SELECTOR = `.${APP_CONTAINER_CLASS}`
