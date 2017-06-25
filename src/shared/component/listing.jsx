@@ -15,18 +15,20 @@ const Listing = (props) => {
           {props.kitchen.name}
         </h3>
         <div className="columns col-online">
-          <img
-            className="listing-pic card-image"
-            src={props.kitchen.pictures[0]}
-            alt="kitchen"
-          />
-          <div className="card-body text-center">
+          <div className="card-image col-6">
+            <img
+              className="listing-pic"
+              src={props.kitchen.pictures[0]}
+              alt="kitchen"
+            />
+          </div>
+          <div className="card-body text-center col-6">
             <strong>Area:</strong> {props.kitchen.area} <br />
             <strong>Rating:</strong> {props.kitchen.rating} <br />
             <strong>Features:</strong>
               <ul>
-                {Object.keys(props.kitchen.features).map((keyValue) => {
-                  return <li key={keyValue}>{keyValue}</li>
+                {Object.keys(props.kitchen.features).map((key, index) => {
+                  return <li key={index}><strong>{key}:</strong> {props.kitchen.features[key]}</li>
                 })}
               </ul>
           </div>
