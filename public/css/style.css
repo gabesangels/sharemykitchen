@@ -18,6 +18,11 @@ h1 {
   margin-bottom: 5px;
 }
 
+.create-listing-card {
+  padding: 20px;
+  margin: 20px;
+}
+
 .one-listing {
   display: block;
   color: inherit;

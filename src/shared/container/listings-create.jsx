@@ -51,7 +51,7 @@ class ListingsCreate extends Component {
   render() {
     return (
       <div className="col-12 text-center">
-        <form onSubmit={this.onSubmit}>
+        <form onSubmit={this.onSubmit} className="card create-listing-card">
           <input
             type="text"
             name="name"
