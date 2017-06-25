@@ -168,7 +168,7 @@ export const seedListings = [
   {
     'name': 'gravida non, sollicitudin a, malesuada id,',
     'host_id': mongoose.Types.ObjectId(),
-    'pictures': [],
+    'pictures': ['http://hbu.h-cdn.co/assets/15/36/980x654/gallery-1441147503-green-hills-residence-5.jpg'],
     'features': {
         'refrigerator': 'black',
         'stove': 'electric',
@@ -186,7 +186,7 @@ export const seedListings = [
   {
     'name': 'velit eu sem. Pellentesque ut ipsum',
     'host_id': mongoose.Types.ObjectId(),
-    'pictures': [],
+    'pictures': ['http://images.traditionalhome.mdpcdn.com/sites/traditionalhome.com/files/slide/101145754_p.jpg'],
     'features': {
         'refrigerator': 'black',
         'stove': 'electric',
@@ -204,7 +204,7 @@ export const seedListings = [
   {
     'name': 'rutrum magna. Cras convallis convallis dolor.',
     'host_id': mongoose.Types.ObjectId(),
-    'pictures': [],
+    'pictures': ['http://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2013/3/4/1/sh13_01-kitchen-hero_4x3.jpg.rend.hgtvcom.966.725.jpeg'],
     'features': {
         'refrigerator': 'black',
         'stove': 'gas',
@@ -222,7 +222,7 @@ export const seedListings = [
   {
     'name': 'lobortis, nisi nibh lacinia orci, consectetuer',
     'host_id': mongoose.Types.ObjectId(),
-    'pictures': [],
+    'pictures': ['http://hbu.h-cdn.co/assets/cm/15/04/980x653/54bf3f6489093_-_hbx-kitchen-of-the-year-2014-s2.jpg'],
     'features': {
         'refrigerator': 'stainless',
         'stove': 'gas',
@@ -240,7 +240,7 @@ export const seedListings = [
   {
     'name': 'ut cursus luctus, ipsum leo elementum',
     'host_id': mongoose.Types.ObjectId(),
-    'pictures': [],
+    'pictures': ['http://hbu.h-cdn.co/assets/15/06/980x598/gallery_nrm_1423079656-hbx-dutch-inspired-kitchen-0512.jpg'],
     'features': {
         'refrigerator': 'stainless',
         'stove': 'gas',
@@ -258,7 +258,7 @@ export const seedListings = [
   {
     'name': 'metus sit amet ante. Vivamus non',
     'host_id': mongoose.Types.ObjectId(),
-    'pictures': [],
+    'pictures': ['http://hbu.h-cdn.co/assets/16/37/980x653/gallery-kitchen-1.jpg'],
     'features': {
         'refrigerator': 'stainless',
         'stove': 'electric',
@@ -276,7 +276,7 @@ export const seedListings = [
   {
     'name': 'molestie arcu. Sed eu nibh vulputate',
     'host_id': mongoose.Types.ObjectId(),
-    'pictures': [],
+    'pictures': ['http://hbu.h-cdn.co/assets/cm/15/04/54c16f4b5179d_-_hbx-kitchen-of-the-year-island-2012-xln.jpg'],
     'features': {
         'refrigerator': 'stainless',
         'stove': 'gas',
@@ -294,7 +294,7 @@ export const seedListings = [
   {
     'name': 'Vestibulum accumsan neque et nunc. Quisque',
     'host_id': mongoose.Types.ObjectId(),
-    'pictures': [],
+    'pictures': ['http://www.miserv.net/large/chatodining.com/wp-content/uploads/2016/02/charming-potted-indoor-plants-feat-cool-small-kitchen-cabinet-remodeling-idea-and-narrow-island-design-plus-white-appliances.jpg'],
     'features': {
         'refrigerator': 'stainless',
         'stove': 'gas',
@@ -312,7 +312,7 @@ export const seedListings = [
   {
     'name': 'odio. Nam interdum enim non nisi.',
     'host_id': mongoose.Types.ObjectId(),
-    'pictures': '[]',
+    'pictures': ['http://hbu.h-cdn.co/assets/17/08/1600x1028/gallery-1487868231-kitchen-1.jpg'],
     'features': {
         'refrigerator': 'black',
         'stove': 'gas',
@@ -330,7 +330,7 @@ export const seedListings = [
   {
     'name': 'luctus vulputate, nisi sem semper erat,',
     'host_id': mongoose.Types.ObjectId(),
-    'pictures': [],
+    'pictures': ['http://hbu.h-cdn.co/assets/16/23/1600x800/landscape-1465239399-industrial-kitchen.jpg'],
     'features': {
         'refrigerator': 'black',
         'stove': 'electric',
