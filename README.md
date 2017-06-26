@@ -1,47 +1,68 @@
 [![Build Status](https://travis-ci.org/gabesangels/sharemykitchen.svg?branch=master)](https://travis-ci.org/gabesangels/sharemykitchen)
 
-# sharemykitchen
-A place for hosts to post a profile and connect with guests that want to rent a kitchen for one night
+# Share My Kitchen
 
-GIT workflow
+Share my kitchen is a place where people can rent out a kitchen/entertaining
+space. Guests can filter through listings based on selection criteria like
+appliances they would like and available dates, while hosts can post ads
+for their spaces.
 
-Git rebase
-Git commit
-Git push set upstream origin stu2
+## Prerequisites 
 
-Pull request
-Refresh
-Check out tests
-Merge and squash
-
-//Go to the master version
-Git checkout master
-//Get the most current version
-Git pull upstream master
-//Make a new branch
-Git checkout -b stu3
-
-When trying to bring in another team members work, when it hasn't been merged with
-git fetch endpoint/tests/1
-git checkout endpoint/tests/1
-
-git checkout -b stutest
-
-When trying to bring in others work while already on their branch
-git stash
-git pull upstream endpoint/tests/1 --rebase
-git stash pop
-git add .
-git commit
+Yarn package manager: https://yarnpkg.com/en/
+MongoDB
 
 
-//to fix a merge conflict:
--pull&rebase changes: git pull upstream [branch name] --rebase
--fix changes and delete HEAD and TAIL comments
--stage and commit changes
--continue the rebase with git rebase --continue
--repeat as necessary. Sometime git rebase --skip is required?
--commit and push changes back up to your branch
--attempt the merge again 
+### Getting Started
 
+Fork and clone down the repository to your local machine. 
+From the terminal, install all of the dependencies with yarn install:
 
+```
+yarn install
+```
+Start the server with yarn start:
+
+```
+yarn start
+```
+Start the compiler:
+
+```
+yarn dev:wds
+```
+The server is running on port 8000, so navigate to localhost:8000
+in your browser to view the app.
+
+To better acquiant yourself with the underlying file structure and technologies
+behing ShareMyKitchen, it would be helpful to review the first 6 steps of this
+JavaScript Fullstack App from Scratch repo:
+
+https://github.com/verekia/js-stack-from-scratch
+
+*Note that Share My Kitchen does not use all of the technologies mentioned in
+the above tutorial. 
+
+### Tests and Linting
+
+### Tech Stack
+
+Front-end:
+- React with Redux
+- Spectre.css 
+
+Back-end:
+- Express
+- MongoDB with Mongoose
+- Webpack
+- Babel
+
+Testing:
+- Travis CI
+- Sentry
+
+### Authors
+
+Gabe Trinidad
+Stu Owens
+Hank Bowen
