@@ -14,9 +14,10 @@ import authenticationReducer from '../shared/reducer/authentication'
 import listingsReducer from '../shared/reducer/listings'
 import { APP_CONTAINER_SELECTOR, RAVEN_PATH_CLIENT } from '../shared/config'
 import { isProd, currEnv } from '../shared/util'
+import { socket, ss } from './socket'
 
 // eslint-disable-next-line prefer-const
-let middlewares = [thunkMiddleware]
+let middlewares = [thunkMiddleware.withExtraArgument({ socket, ss })]
 if (RAVEN_PATH_CLIENT) {
   /* eslint-disable global-require */
   const Raven = require('raven-js')

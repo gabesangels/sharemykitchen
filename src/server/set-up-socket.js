@@ -25,7 +25,7 @@ const setUpSocket = (io) => {
 
     ss(socket).on(LISTING_PICTURE, (stream) => {
       const key = +new Date()
-      socket.emit(LISTING_PICTURE_START, key)
+      socket.emit(`${LISTING_PICTURE_START}`)
       console.log('[socket.io] uploading key: ', key)
 
       const upload = new AWS.S3.ManagedUpload({
@@ -38,17 +38,17 @@ const setUpSocket = (io) => {
 
       upload.on('httpUploadProgress', (progress) => {
         console.log(`[socket.io] current progress of ${progress.key}: ${(progress.loaded / progress.total) * 100}%`)
-        socket.emit(LISTING_PICTURE_PROGRESS, progress)
+        socket.emit(`${LISTING_PICTURE_PROGRESS}`, progress)
       })
 
-      upload.send((err) => {
+      upload.send((err, data) => {
         if (err) {
           console.log('error:', err)
-          socket.emit(LISTING_PICTURE_FAILURE)
+          socket.emit(`${LISTING_PICTURE_FAILURE}`, err)
           return
         }
         console.log('success')
-        socket.emit(LISTING_PICTURE_SUCCESS)
+        socket.emit(`${LISTING_PICTURE_SUCCESS}`, data)
       })
     })
 
