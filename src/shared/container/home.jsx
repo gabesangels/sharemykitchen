@@ -8,6 +8,24 @@ import querystring from 'querystring'
 import { FEATURE_TYPES } from '../config'
 import HomePageCarousel from '../component/home-page-carousel'
 
+const featureSelectColors = [
+  { background: '#5764c6',
+    WebkitTextFillColor: 'black',
+  },
+  { background: '#32b643',
+    WebkitTextFillColor: 'black',
+  },
+  { background: '#ffb700',
+    WebkitTextFillColor: 'black',
+  },
+  { background: '#e85600',
+    WebkitTextFillColor: 'black',
+  },
+  { background: '#727e96',
+    WebkitTextFillColor: 'black',
+  },
+]
+
 class Home extends React.Component {
   constructor(props) {
     super(props)
@@ -81,11 +99,11 @@ class Home extends React.Component {
                 <div className="columns">
                   {FEATURE_TYPES.map((feature, i) => {
                     return (
-                      <div key={i} className="col-2 centered">
-                        <h5>{feature.type}</h5>
+                      <div key={i} className="col-2 centered card" style={featureSelectColors[i]}>
+                        <h5 className="card-header">{feature.type}</h5>
                         {feature.children.map((child, j) => {
                           return (
-                            <label className="centered" key={j} htmlFor={child.name}>
+                            <label className="centered card-body" key={j} htmlFor={child.name}>
                               <input
                                 type="radio"
                                 name={child.name}

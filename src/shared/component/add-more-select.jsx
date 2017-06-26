@@ -63,6 +63,8 @@ class AddMoreSelect extends PureComponent {
             )
           })}
         </select>
+        <br />
+        <br />
         <select onChange={this.onChangeValue} className="form-select">
           {this.state.options[this.state.currentKey].children.map((option) => {
             return (
