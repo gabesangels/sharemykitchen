@@ -7,13 +7,26 @@ import PropTypes from 'prop-types'
 import { listingsCreateAsync } from '../action/listings'
 import AddMoreSelect from '../component/add-more-select'
 import ImageUpload from './image-upload'
+import ListingPreview from '../component/listing-preview'
 
 import { listingsShowRoute } from '../routes'
+
+const FORM_FIELDS = [
+  { name: 'name', label: 'Name', type: 'text' },
+  { name: 'address', label: 'Address', type: 'adress' },
+  { name: 'rate', label: 'Rate (USD/Day)', type: 'number' },
+  { name: 'area', label: 'Area', type: 'text', tagName: 'textarea' },
+]
 
 class ListingsCreate extends Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = FORM_FIELDS.reduce((acc, curr) => {
+      return Object.assign({}, acc, { [curr.name]: null })
+    }, {
+      features: [],
+      pictures: []
+    })
     this.onSubmit = this.onSubmit.bind(this)
     this.onChange = this.onChange.bind(this)
     this.onAddMoreSelectChange = this.onAddMoreSelectChange.bind(this)
@@ -35,55 +48,57 @@ class ListingsCreate extends Component {
 
   onFileUpload(url) {
     if (url) {
-      const pictures = this.state.pictures ? this.state.pictures.concat(url) : [url]
+      const pictures = this.state.pictures.concat(url)
       this.setState({ pictures })
     }
   }
 
   render() {
     return (
-      <div className="col-12 text-center">
-        <form onSubmit={this.onSubmit} className="card create-listing-card">
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            onChange={this.onChange}
-          />
-          <br />
-          <br />
-          <input
-            type="address"
-            name="address"
-            placeholder="Address"
-            onChange={this.onChange}
-          />
-          <br />
-          <br />
-          <input
-            type="number"
-            name="rate"
-            placeholder="Rate (USD/day)"
-            onChange={this.onChange}
-          />
-          <br />
-          <br />
-          <input
-            type="text"
-            name="area"
-            placeholder="Area"
-            onChange={this.onChange}
-          />
-          <br />
-          <br />
+      <form
+        onSubmit={this.onSubmit}
+        className="columns"
+      >
+        <div className="column col-7">
+          {FORM_FIELDS.map((field) => {
+            const TagName = field.tagName ? field.tagName : 'input'
+            return (
+              <div 
+                key={field.name}
+                className="form-group">
+                <label 
+                  className="form-label text-bold" 
+                  htmlFor={field.name}
+                >
+                  {field.label}
+                </label>
+                <TagName
+                  id={field.name}
+                  type={field.type}
+                  name={field.name}
+                  className="form-input"
+                  onChange={this.onChange}
+                  placeholder={field.placeholder}
+                  {...Object.assign(
+                    {},
+                    TagName === 'textarea' && { rows: 3 },
+                  )}
+                />
+              </div>
+            )
+          })}
           <ImageUpload onUploadSuccess={this.onFileUpload} />
-          <br />
-          <br />
           <AddMoreSelect onChange={this.onAddMoreSelectChange} />
-          <br />
-          <input className="btn btn-lg" type="submit" value="Post" />
-        </form>
-      </div>
+          <input 
+            className="btn btn-primary btn-lg"
+            type="submit"
+            value="Publish"
+          />
+        </div>
+        <div className="column col-5">
+          <ListingPreview {...this.state} />
+        </div>
+      </form>
     )
   }
 }

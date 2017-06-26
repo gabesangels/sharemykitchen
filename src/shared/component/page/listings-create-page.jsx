@@ -7,7 +7,6 @@ import ListingsCreate from '../../container/listings-create'
 const ListingsCreatePage = (props) => {
   return (
     <div>
-      <h2 className="text-center">Share your kitchen!</h2>
       <div className="divider" />
       <ListingsCreate history={props.history} />
     </div>

@@ -64,11 +64,17 @@ class ImageUpload extends React.Component {
 
   render() {
     return (
-      <input
-        type="file"
-        onChange={this.onFileChange}
-        disabled={this.state.complete}
-      />
+      <div
+        className="form-group"
+      >
+        <label className="form-label text-bold">Picture</label>
+        <input
+          className="form-input"
+          type="file"
+          onChange={this.onFileChange}
+          disabled={this.state.complete}
+        />
+      </div>
     )
   }
 }

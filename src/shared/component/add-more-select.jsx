@@ -43,7 +43,9 @@ class AddMoreSelect extends PureComponent {
 
   render() {
     return (
-      <div>
+      <div
+        className="form-group"
+      > 
         {Object.keys(this.state.features).map((key) => {
           return (
             <p key={key}>
@@ -51,43 +53,48 @@ class AddMoreSelect extends PureComponent {
             </p>
           )
         })}
-        <select onChange={this.onChangeKey} className="form-select">
-          {this.props.options.map((option) => {
-            return (
-              <option
-                key={option.type}
-                value={option.type}
-              >
-                {option.type}
-              </option>
-            )
-          })}
-        </select>
-        <br />
-        <br />
-        <select onChange={this.onChangeValue} className="form-select">
-          {this.state.options[this.state.currentKey].children.map((option) => {
-            return (
-              <option
-                key={option.label}
-                data-name={option.name}
-                value={option.value}
-              >
-                {option.label}
-              </option>
-            )
-          })}
-        </select>
-        <br />
-        <br />
-        <button
-          type="button"
-          onClick={this.onClick}
-          disabled={!this.state.currentVal}
-          className="btn"
-        >
-          Add Feature
-        </button>
+        <label className="form-label text-bold">Features</label>
+        <div className="columns">
+          <div className="column col-5">
+            <select onChange={this.onChangeKey} className="form-select">
+              {this.props.options.map((option) => {
+                return (
+                  <option
+                    key={option.type}
+                    value={option.type}
+                  >
+                    {option.type}
+                  </option>
+                )
+              })}
+            </select>
+          </div>
+          <div className="column col-5">
+            <select onChange={this.onChangeValue} className="form-select">
+              {this.state.options[this.state.currentKey].children.map((option) => {
+                return (
+                  <option
+                    key={option.label}
+                    data-name={option.name}
+                    value={option.value}
+                  >
+                    {option.label}
+                  </option>
+                )
+              })}
+            </select>
+          </div>
+          <div className="column col-2">
+            <button 
+              type="button"
+              onClick={this.onClick}
+              disabled={!this.state.currentVal}
+              className="btn btn-action circle"
+            >
+              <i className="icon icon-plus"></i>
+            </button>
+          </div>
+        </div>
       </div>
     )
   }
