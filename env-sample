@@ -1,0 +1,12 @@
+NODE_ENV=development
+PORT=8000
+RAVEN_PATH_SERVER=[url here]
+RAVEN_PATH_CLIENT=[url here]
+FACEBOOK_CLIENT_ID=[replace after registering your app with facebook for developers]
+FACEBOOK_CLIENT_SECRET=[replace after registering your app with facebook for developers]
+FACEBOOK_CALLBACK_URL=http://localhost:8000/auth/facebook/callback
+COOKIE_SECRET=[]
+AWS_ACCESS_KEY_ID=[AWS ACCESS KEY]
+AWS_SECRET_ACCESS_KEY=[AWS SECRET ACCESS KEY]
+AWS_REGION=us-east-1
+AWS_S3_BUCKET=sharemykitchen

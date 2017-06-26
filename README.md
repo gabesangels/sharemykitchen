@@ -11,6 +11,8 @@ for their spaces.
 
 - Yarn package manager: https://yarnpkg.com/en/
 - MongoDB
+- Register yourself and team members with facebook for developers 
+  (https://developers.facebook.com/).
 
 
 ### Getting Started
@@ -44,8 +46,6 @@ https://github.com/verekia/js-stack-from-scratch
 
 *Note that Share My Kitchen does not use all of the technologies mentioned in
 the above tutorial. 
-
-### Authorization with Facebook
 
 ### Tests and Linting
 
