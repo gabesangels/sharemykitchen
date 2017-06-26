@@ -9,8 +9,8 @@ for their spaces.
 
 ## Prerequisites 
 
-Yarn package manager: https://yarnpkg.com/en/
-MongoDB
+- Yarn package manager: https://yarnpkg.com/en/
+- MongoDB
 
 
 ### Getting Started
