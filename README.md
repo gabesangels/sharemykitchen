@@ -21,6 +21,8 @@ From the terminal, install all of the dependencies with yarn install:
 ```
 yarn install
 ```
+Create a .env file in the root directory. Copy and paste the contents of env-sample into the .env file. 
+
 Start the server with yarn start:
 
 ```
@@ -43,12 +45,14 @@ https://github.com/verekia/js-stack-from-scratch
 *Note that Share My Kitchen does not use all of the technologies mentioned in
 the above tutorial. 
 
+### Authorization with Facebook
+
 ### Tests and Linting
 
 ### Tech Stack
 
 Front-end:
-- React with Redux
+- React with Redux & React Router
 - Spectre.css 
 
 Back-end:
