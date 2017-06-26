@@ -67,9 +67,10 @@ class ImageUpload extends React.Component {
       <div
         className="form-group"
       >
-        <label className="form-label text-bold">Picture</label>
+        <label className="form-label text-bold" htmlFor="file">Picture</label>
         <input
           className="form-input"
+          name="file"
           type="file"
           onChange={this.onFileChange}
           disabled={this.state.complete}

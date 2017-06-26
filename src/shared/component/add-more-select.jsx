@@ -45,7 +45,7 @@ class AddMoreSelect extends PureComponent {
     return (
       <div
         className="form-group"
-      > 
+      >
         {Object.keys(this.state.features).map((key) => {
           return (
             <p key={key}>
@@ -53,10 +53,10 @@ class AddMoreSelect extends PureComponent {
             </p>
           )
         })}
-        <label className="form-label text-bold">Features</label>
+        <label className="form-label text-bold" htmlFor="select">Features</label>
         <div className="columns">
           <div className="column col-5">
-            <select onChange={this.onChangeKey} className="form-select">
+            <select onChange={this.onChangeKey} className="form-select" name="select">
               {this.props.options.map((option) => {
                 return (
                   <option
@@ -85,13 +85,13 @@ class AddMoreSelect extends PureComponent {
             </select>
           </div>
           <div className="column col-2">
-            <button 
+            <button
               type="button"
               onClick={this.onClick}
               disabled={!this.state.currentVal}
               className="btn btn-action circle"
             >
-              <i className="icon icon-plus"></i>
+              <i className="icon icon-plus" />
             </button>
           </div>
         </div>

@@ -25,7 +25,7 @@ class ListingsCreate extends Component {
       return Object.assign({}, acc, { [curr.name]: null })
     }, {
       features: [],
-      pictures: []
+      pictures: [],
     })
     this.onSubmit = this.onSubmit.bind(this)
     this.onChange = this.onChange.bind(this)
@@ -63,11 +63,12 @@ class ListingsCreate extends Component {
           {FORM_FIELDS.map((field) => {
             const TagName = field.tagName ? field.tagName : 'input'
             return (
-              <div 
+              <div
                 key={field.name}
-                className="form-group">
-                <label 
-                  className="form-label text-bold" 
+                className="form-group"
+              >
+                <label
+                  className="form-label text-bold"
                   htmlFor={field.name}
                 >
                   {field.label}
@@ -89,7 +90,7 @@ class ListingsCreate extends Component {
           })}
           <ImageUpload onUploadSuccess={this.onFileUpload} />
           <AddMoreSelect onChange={this.onAddMoreSelectChange} />
-          <input 
+          <input
             className="btn btn-primary btn-lg"
             type="submit"
             value="Publish"

@@ -1,31 +1,28 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
-class Profile extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-    }
-
-  }
-  render() {
-    console.log('props', this.props)
-    return (
-      <div>
-        <div className="text-center">
-          <h2>{this.props.user.name}</h2>
-          <img src={this.props.user.picture}></img>
-          <h2>Email: {this.props.user.email}</h2>
-          </div>
+const Profile = ({ name, picture, email }) => {
+  return (
+    <div>
+      <div className="text-center">
+        <h2>{name}</h2>
+        <img src={picture} alt="" />
+        <h2>Email: {email}</h2>
       </div>
-    )
-  }
+    </div>
+  )
+}
+
+Profile.propTypes = {
+  name: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  picture: PropTypes.string.isRequired,
 }
 
 const mapStateToProps = (state) => {
-  console.log(state)
   return {
-    user: state.authentication.user
+    ...state.authentication.user,
   }
 }
 

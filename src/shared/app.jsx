@@ -7,18 +7,15 @@ import Helmet from 'react-helmet'
 import { APP_NAME } from './config'
 import {
   HOME_PAGE_ROUTE,
-  HELLO_PAGE_ROUTE,
-  HELLO_ASYNC_PAGE_ROUTE,
   LISTINGS_INDEX,
   LISTINGS_SHOW,
   LISTINGS_CREATE,
+  AUTH_ME,
 } from './routes'
+
 import Nav from './component/nav'
 import HomePage from './component/page/home'
-import HelloPage from './component/page/hello'
-import HelloAsyncPage from './component/page/hello-async'
 import NotFoundPage from './component/page/not-found'
-
 import ProfilePage from './component/page/profile-page'
 import ListingsPage from './component/page/listings-page'
 import ListingDetailPage from './component/page/listing-detail-page'
@@ -31,13 +28,10 @@ const App = () => {
       <Nav />
       <Switch>
         <Route exact path={HOME_PAGE_ROUTE} render={() => <HomePage />} />
-        <Route exact path={HOME_PAGE_ROUTE} render={() => <HomePage />} />
-        <Route path={HELLO_PAGE_ROUTE} render={() => <HelloPage />} />
-        <Route path={HELLO_ASYNC_PAGE_ROUTE} render={() => <HelloAsyncPage />} />
-        <Route path={LISTINGS_CREATE} render={() => <ListingsCreatePage />} />
-        <Route path={LISTINGS_SHOW} render={() => <ListingDetailPage />} />
-        <Route path={LISTINGS_INDEX} render={() => <ListingsPage />} />
-        <Route path="/profile" render={() => <ProfilePage />} />
+        <Route exact path={AUTH_ME} render={() => <ProfilePage />} />
+        <Route exact path={LISTINGS_CREATE} render={() => <ListingsCreatePage />} />
+        <Route exact path={LISTINGS_SHOW} render={() => <ListingDetailPage />} />
+        <Route exact path={LISTINGS_INDEX} render={() => <ListingsPage />} />
         <Route render={() => <NotFoundPage />} />
       </Switch>
     </div>

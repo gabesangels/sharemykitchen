@@ -1,11 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-const ListingPreview = (props) => {
-  console.log(props)
+const ListingPreview = () => {
   return (
-    <div>
-      
-    </div>
+    <div />
   )
 }
 

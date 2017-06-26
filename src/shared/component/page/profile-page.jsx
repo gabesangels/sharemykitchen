@@ -3,7 +3,7 @@ import React from 'react'
 import Profile from '../../container/profile'
 import ListingsList from '../../container/ListingList'
 
-const ProfilePage = (props) => {
+const ProfilePage = () => {
   return (
     <div>
       <h1 className="text-center">Profile Page</h1>
