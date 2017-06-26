@@ -19,6 +19,7 @@ import HelloPage from './component/page/hello'
 import HelloAsyncPage from './component/page/hello-async'
 import NotFoundPage from './component/page/not-found'
 
+import ProfilePage from './component/page/profile-page'
 import ListingsPage from './component/page/listings-page'
 import ListingDetailPage from './component/page/listing-detail-page'
 import ListingsCreatePage from './component/page/listings-create-page'
@@ -36,6 +37,7 @@ const App = () => {
         <Route path={LISTINGS_CREATE} render={() => <ListingsCreatePage />} />
         <Route path={LISTINGS_SHOW} render={() => <ListingDetailPage />} />
         <Route path={LISTINGS_INDEX} render={() => <ListingsPage />} />
+        <Route path="/profile" render={() => <ProfilePage />} />
         <Route render={() => <NotFoundPage />} />
       </Switch>
     </div>

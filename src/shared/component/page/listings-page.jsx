@@ -10,7 +10,6 @@ const ListingsPage = (props) => {
   return (
     <div>
       <h2 className="text-center">Available Listings</h2>
-      <ListingList query={qs} />
     </div>
   )
 }

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 const UserLinkButton = ({ picture, ...rest }) => {
   return (
     <Link
-      to="/"
+      to="/profile"
       className="avatar avatar-md"
       {...rest}
     >
