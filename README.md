@@ -63,6 +63,6 @@ Testing:
 
 ### Authors
 
-Gabe Trinidad
-Stu Owens
-Hank Bowen
+- Gabe Trinidad
+- Stu Owens
+- Hank Bowen
