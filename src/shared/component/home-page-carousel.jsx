@@ -17,8 +17,8 @@ const HomePageCarousel = () => {
             type="radio"
             id="slide-2"
             name="carousel-radio"
-            hidden
             className="carousel-locator"
+            hidden
             defaultChecked
           />
           <input
@@ -45,7 +45,9 @@ const HomePageCarousel = () => {
               <label className="item-next btn btn-action btn-lg" htmlFor="slide-2">
                 <i className="icon icon-arrow-right" />
               </label>
-              <img src="http://www.loversiq.com/daut/as/f/k/kitchen-modern-white-cabinets-making-your-look-picture-cabinet-also-kitchne_beautiful-white-kitchens_home-decor_unique-home-decor-sincere-websites-fabric-decorating-blogs-catalog-blog-fall-catalogs.jpg" className="img-responsive rounded" alt="macOS Yosemite Wallpaper" />
+              <div className="custom-carousel-item">
+                <h3 className="custom-carousel-item-text">sharemykitchen</h3>
+              </div>
             </figure>
 
             <figure className="carousel-item">
@@ -55,7 +57,11 @@ const HomePageCarousel = () => {
               <label className="item-next btn btn-action btn-lg" htmlFor="slide-3">
                 <i className="icon icon-arrow-right" />
               </label>
-              <img src="http://ak.c.ooyala.com/04dmdyNDE6mgcTfOELslxVRP0bCgPr43/promo292876389" className="img-responsive rounded" alt="macOS Yosemite Wallpaper" />
+              <img
+                src="/static/images/c2.jpg"
+                className="img-responsive rounded"
+                alt="macOS Yosemite Wallpaper"
+              />
             </figure>
 
             <figure className="carousel-item">
@@ -65,7 +71,11 @@ const HomePageCarousel = () => {
               <label className="item-next btn btn-action btn-lg" htmlFor="slide-4">
                 <i className="icon icon-arrow-right" />
               </label>
-              <img src="http://clv.h-cdn.co/assets/16/32/perfect-fit-kitchen-0916.jpg" className="img-responsive rounded" alt="macOS Yosemite Wallpaper" />
+              <img
+                src="/static/images/c3.jpg"
+                className="img-responsive rounded"
+                alt="macOS Yosemite Wallpaper"
+              />
             </figure>
 
             <figure className="carousel-item">
@@ -75,7 +85,11 @@ const HomePageCarousel = () => {
               <label className="item-next btn btn-action btn-lg" htmlFor="slide-1">
                 <i className="icon icon-arrow-right" />
               </label>
-              <img src="http://www.remodelingdiy.com/wp-content/uploads/2016/06/remodeling-a-small-kitchen.jpg" className="img-responsive rounded" alt="macOS Yosemite Wallpaper" />
+              <img
+                src="/static/images/c4.jpg"
+                className="img-responsive rounded"
+                alt="macOS Yosemite Wallpaper"
+              />
             </figure>
           </div>
           <div className="carousel-nav">

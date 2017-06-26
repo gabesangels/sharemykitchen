@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Button = ({ label, handleClick }) => {
+const Button = ({ label, handleClick, ...props }) => {
   return (
-    <button onClick={handleClick}>{label}</button>
+    <button {...props} onClick={handleClick}>{label}</button>
   )
 }
 

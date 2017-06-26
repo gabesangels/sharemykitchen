@@ -6,7 +6,7 @@ import { AUTH_FACEBOOK, AUTH_LOGOUT } from '../routes'
 
 const mapStateToProps = (state) => {
   return {
-    text: state.authentication.isLoggedIn ? 'logout' : 'login',
+    text: state.authentication.isLoggedIn ? 'Logout' : 'Login',
     href: state.authentication.isLoggedIn ? `/auth${AUTH_LOGOUT}` : `/auth${AUTH_FACEBOOK}`,
   }
 }

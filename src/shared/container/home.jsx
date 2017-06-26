@@ -70,7 +70,6 @@ class Home extends React.Component {
         <div className="columns">
           <div className="col-12 text-center">
             <form onSubmit={this.onSubmit}>
-              <h3> Welcome! </h3>
               <HomePageCarousel />
               <p>Share My Kitchen is a place where foodies and entertainers can
               make their spaces and tools available to like-minded individuals.

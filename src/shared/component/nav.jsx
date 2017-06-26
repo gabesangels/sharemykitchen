@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import LoginLink from '../container/login-link'
+import UserLink from '../container/user-link'
 
 import {
   HOME_PAGE_ROUTE,
@@ -11,23 +11,32 @@ import {
 
 const Nav = () => {
   return (
-    <nav>
-      <ul className="breadcrumb text-center">
+    <nav className="main-nav navbar">
+      <section className="navbar-section">
+        <NavLink
+          to={HOME_PAGE_ROUTE}
+          className="logo"
+          exact
+        />
+      </section>
+      <section className="navbar-section">
         {[
-          { route: HOME_PAGE_ROUTE, label: 'home' },
-          { route: LISTINGS_INDEX, label: 'listings' },
-          { route: LISTINGS_CREATE, label: 'host' },
+          { route: LISTINGS_INDEX, label: 'Listings' },
+          { route: LISTINGS_CREATE, label: 'Be a Host' },
         ].map((link) => {
           return (
-            <li className="breadcrumb-item" key={link.route}>
-              <NavLink to={link.route} activeStyle={{ color: 'limegreen' }} exact>{link.label}</NavLink>
-            </li>
+            <NavLink
+              key={link.label}
+              to={link.route}
+              className="btn btn-link mr-10"
+              exact
+            >
+              {link.label}
+            </NavLink>
           )
         })}
-        <li className="breadcrumb-item">
-          <LoginLink />
-        </li>
-      </ul>
+        <UserLink className="btn btn-link" />
+      </section>
     </nav>
   )
 }

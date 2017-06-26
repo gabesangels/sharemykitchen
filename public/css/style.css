@@ -1,3 +1,11 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   width: 100%;
   margin: auto;
@@ -6,6 +14,10 @@ body {
 
 h1 {
   color: limegreen;
+}
+
+a:focus {
+  box-shadow: none;
 }
 
 .listing-list {
@@ -39,4 +51,51 @@ h1 {
   height: 200px;
   width: 200px;
   margin-left: 15px;
+}
+
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main-nav {
+  padding-top: 1.2em;
+  padding-bottom: 0.4em;
+}
+
+.logo {
+  background-image: url('/static/images/logo-only.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  height: 30px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 500px) {
+  .logo {
+    background-image: url('/static/images/logo-with-name.png');
+  }
+}
+
+.logo:focus {
+  box-shadow: none;
+}
+
+.custom-carousel-item {
+  background-image: url('/static/images/c1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  height: 100%;
+  display: flex;
+}
+
+.custom-carousel-item-text {
+  color: white;
+  padding-top: 2em;
+  align-self: flex-end;
+  margin-left: 10%;
+  margin-bottom: 5%;
 }
