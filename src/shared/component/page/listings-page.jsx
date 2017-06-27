@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router'
 
-import ListingList from '../../container/ListingList'
+import ListingList from '../../container/listing-list'
 
 const ListingsPage = (props) => {
   const qs = props.location.search
